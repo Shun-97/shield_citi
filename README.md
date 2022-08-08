@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+SMU Team 7Rs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting started
+##  Ubuntu Server ( No VNC )
+<hr>
 
-## Available Scripts
+Run the VM \
+docker build -t ubuntu-server . \
+docker run -it -p 5901:5901 ubuntu-server \
 
-In the project directory, you can run:
+## Microservices
+<hr>
 
-### `npm start`
+### Note on Building Microservice
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To build microservices, we start from port 4001, which is our auth js so please build in sequence (do not jump ports)
+Each microservice contains a mongodb folder, which starts from port 27017, this is tricky, 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To start: \
+*Navigate to the microservice folder*
+```
+npm i
+node server.js
+```
 
-### `npm test`
+## MongoDB
+<hr>
+As each pc only can have one instance of mongodb, we need to publish the database on the container. \
+*Note: Please do ensure that you have a dockerfile and a init-mongo.js within each mongodb folder.*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To build the mongodb, please run the following commands inside the mongodb folder within YOUR microservice
 
-### `npm run build`
+To start: \
+*Navigate to the microservice/mongodb folder*
+```
+docker build -t <microserviceName> + "db" .
+docker run -itd -p <270**>:27017 <microserviceName> + "db"
+```
+### Example:
+auth is running on port 27017, and createaccount is 27019! so we write it like this
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+docker build -t authdb .  
+docker run -itd -p 27017:27017 authdb
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+docker build -t coursedb .
+docker run -itd -p 27019:27017 coursedb
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Note: the port number on the left increases, but the port number on the right remains the same as thats the port (27017) that mongodb runs on the container
+## List of Microservice and their db (Name : Port)
+<hr>
 
-### `npm run eject`
+- authentication
+  - authdb : 27017:207017
+- courseDetails
+  - coursedetdb : 27020:207017
+- createCourse
+  - coursesdb : 27019:207017
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Connecting microservice to mongodb
+<hr>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Template:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+const uri = "mongodb://admin:team7rsdell@127.0.0.1:<port number of the port u declare in the docker run command>/<name of the db you create in init-mongo.js>"
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+example code: authdb
+```
+const uri = "mongodb://admin:team7rsdell@127.0.0.1:27017/accounts"
 
-## Learn More
+mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(()=>console.log('connected'))
+.catch(e=>console.log(e));
+```
+example code: coursesdb
+```
+const uri = "mongodb://admin:team7rsdell@127.0.0.1:27019/courses"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(()=>console.log('connected'))
+.catch(e=>console.log(e));
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,0 +1,27 @@
+[
+    {
+        "courseid": "CS101",
+        "classList": [
+            {
+                "name": "test",
+                "userid": "001",
+                "role": "Student",
+                "email": "test@example.com"
+            },
+            {
+                "name": "test2",
+                "userid": "002",
+                "role": "Student",
+                "email": "test2@example.com"
+            },
+            {
+                "name": "test3",
+                "userid": "003",
+                "role": "Student",
+                "email": "test3@example.com"
+            }
+            
+        ]
+    }
+    
+]

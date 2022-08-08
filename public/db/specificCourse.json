@@ -1,0 +1,213 @@
+[
+    {
+      "id": "CS101",
+      "name": "Computing 101" ,
+      "general" : "As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand. We get our heart broken by people we love, even that we give them all...",
+      "instructor": "Monkey Meng",
+      "teachingAssistant": "Siew Mia",
+      "timing": "2022-07-08T08:15:30+08:00",
+      "midterm": "20 July 2022",
+      "final": "20 Nov 2022",
+      "chapters": [
+            {   "name": "Chapter 1",
+                "general" :"As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand. We get our heart broken by people we love, even that we give them all...",
+                "topics": [
+                    {   "id": "COM101-1-1",
+                        "name": "Introduction and Computer Software",
+                        "material": [
+                            {   "name": "Introduction",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            },
+                            {   "name": "Computer Software",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            }
+                        ],
+                        "reading": [
+                            {   "name": "Reading 1",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            },
+                            {   "name": "Reading 2",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            }
+                        ],
+                        "mark": 70
+                    },
+                    {   "id": "COM101-1-2",
+                        "name": "Computer Hardware",
+                        "material": [
+                            {
+                                "name": "Introduction",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            },
+                            {
+                                "name": "Computer Hardware",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            }
+                        ],
+                        "reading": [
+                            {   "name": "Reading 1",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            },
+                            {   "name": "Reading 2",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            }
+                        ],
+                        "mark": 60
+                    }
+                ]
+            },
+            {   "name": "Chapter 2",
+                "general" :"As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand. We get our heart broken by people we love, even that we give them all...",
+                "topics": [
+                    {   "id": "COM101-2-1",
+                        "name": "Data and Storage",
+                        "material": [
+                            {   "name": "Introduction",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            },
+                            {   "name": "Data and Storage",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            }
+                        ],
+                        "reading": [
+                            {   "name": "Reading 1",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            },
+                            {   "name": "Reading 2",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            }
+                        ],
+                        "mark": 65
+                        
+                    },
+                    {   "id": "COM101-2-2",
+                        "name": "Images and Videos",
+                        "material": [
+                            {
+                                "name": "Introduction",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            },
+                            {
+                                "name": "Images and Videos",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            }
+                        ],
+                        "reading": [
+                            {   "name": "Reading 1",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            },
+                            {   "name": "Reading 2",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            }
+                        ],
+                        "mark": 89
+                    }
+                ]
+            }
+        ]
+
+    },
+    {
+        "id": "NET101",
+        "name": "Networking 101" ,
+        "general" : "As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand. We get our heart broken by people we love, even that we give them all...",
+        "instructor": "Shiba Chris",
+        "teachingAssistant": "Siew Mia",
+        "timing": "2022-07-09T08:15:30+08:00",
+        "midterm": "20 July 2022",
+        "final": "20 Nov 2022",
+        "chapters": [
+              {   "name": "Chapter 1",
+                  "general" :"As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand. We get our heart broken by people we love, even that we give them all...",
+                  "topics": [
+                      {   "name": "Introduction and Networking",
+                          "material": [
+                              {   "name": "Introduction",
+                                  "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                              },
+                              {   "name": "Networking",
+                                  "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                              }
+                          ],
+                          "reading": [
+                            {   "name": "Reading 1",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            },
+                            {   "name": "Reading 2",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            }
+                        ],
+                          "mark": 70
+                      },
+                      {   "name": "Computer Networking",
+                          "material": [
+                              {
+                                  "name": "Introduction",
+                                  "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                              },
+                              {
+                                  "name": "Computer Networking",
+                                  "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                              }
+                          ],
+                          "reading": [
+                            {   "name": "Reading 1",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            },
+                            {   "name": "Reading 2",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            }
+                        ],
+                          "mark": 90
+                      }
+                  ]
+              },
+              {   "name": "Chapter 2",
+                  "general" :"As we live, our hearts turn colder. Cause pain is what we go through as we become older. We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand. We get our heart broken by people we love, even that we give them all...",
+                  "topics": [
+                      {   "name": "Networking Storage",
+                          "material": [
+                              {   "name": "Introduction",
+                                  "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                              },
+                              {   "name": "Networking Storage",
+                                  "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                              }
+                          ],
+                          "reading": [
+                            {   "name": "Reading 1",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            },
+                            {   "name": "Reading 2",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            }
+                        ],
+                          "mark": 56
+                      },
+                      {   "name": "Networking Videos",
+                          "material": [
+                              {
+                                  "name": "Introduction",
+                                  "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                              },
+                              {
+                                  "name": "Networking Videos",
+                                  "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                              }
+                          ],
+                          "reading": [
+                            {   "name": "Reading 1",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            },
+                            {   "name": "Reading 2",
+                                "url": "https://smu-my.sharepoint.com/:t:/r/personal/shunhui_lee_2019_scis_smu_edu_sg/Documents/Sharing%20Documents/downloadFile.txt?csf=1&web=1&e=ZVZ5qF"
+                            }
+                        ],
+                          "mark": 75
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
+  
