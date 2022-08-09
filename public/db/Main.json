@@ -10,7 +10,7 @@
     }
     ,{
         "CardHeader": "CardHeader",
-        "CardBody": "CardBody",
+        "CardBody": "CardBody for <b>life</b>",
         "Image": "/mainImage/Working.png",
         "ImageAlt": "Working",
         "ImageHeight": "10rem",
