@@ -17,6 +17,7 @@ import SignInCentered from "views/auth/signIn";
 
 // Common import
 import Home from "views/common/home";
+import Report from "views/common/report";
 
 const routes = [
   {
@@ -38,7 +39,7 @@ const routes = [
     layout: "/admin",
     path: "/profile",
     icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
-    component: Profile,
+    component: Report,
   }
 ];
 
