@@ -39,7 +39,7 @@ function Sidebar(props) {
 
   // SIDEBAR
   return (
-    <Box display={{ sm: "none", xl: "block" }} position='fixed' minH='100%'>
+    <Box display={{ sm: "none", lg: "block" }} position='fixed' minH='100%'>
       <Box
         bg={sidebarBg}
         transition={variantChange}
@@ -48,7 +48,8 @@ function Sidebar(props) {
         m={sidebarMargins}
         minH='100%'
         overflowX='hidden'
-        boxShadow={shadow}>
+        boxShadow={shadow}
+        >
         <Scrollbars
           autoHide
           renderTrackVertical={renderTrack}
@@ -74,7 +75,7 @@ export function SidebarResponsive(props) {
   //  BRAND
 
   return (
-    <Flex display={{ sm: "flex", xl: "none" }} alignItems='center'>
+    <Flex display={{ sm: "flex", lg: "none" }} alignItems='center'>
       <Flex ref={btnRef} w='max-content' h='max-content' onClick={onOpen}>
         <Icon
           as={IoMenuOutline}
