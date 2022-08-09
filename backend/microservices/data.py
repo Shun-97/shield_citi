@@ -8,7 +8,10 @@ class data:
 
     def __init__(self, ticker):
         self.ticker = ticker
-        self.price = self.getPrice(ticker)
+        price = self.getPrice(ticker)
+
+        if(price != None): 
+            self.price = price
 
         valueDict = self.getEsg_and_esgIndustry(ticker)
 
@@ -34,10 +37,12 @@ class data:
             data = connection.read()
             data_2 = json.loads(data)
             price = data_2["quoteSummary"]["result"][0]["summaryDetail"]["open"]["fmt"]
-            return price
 
         except:
-            print(ticker + "'s ESG values cannot be found in yahoo")
+            print(ticker + "'s pricing cannot be found in yahoo")
+            return None
+        
+        return price
 
     
     def getEsg_and_esgIndustry(self, ticker):
@@ -82,7 +87,7 @@ def obtain_companies(ticketList):
 # print("errors: ")
 varuList1 = ['AAPL', 'BAC', 'AMZN', 'T', 'MO', 'DAL', 'AA', 'AXP', 'DD', 'BABA', 'ABT', 'UA', 'AMAT', 'AMGN', 'AAL', 'AIG', 'ALL', 'ADBE', 'GOOGL', 'ACN', 'ABBV', 'MT', 'LLY', 'AGN', 'APA', 'ADP', 'APC', 'AKAM', 'NLY', 'ABX', 'ATVI', 'ADSK', 'ADM', 'BMH.AX', 'WBA', 'ARNA', 'LUV', 'ACAD', 'PANW', 'AMD', 'AET', 'AEP', 'ALXN', 'AVGO', 'EA', 'DB', 'AEM', 'APD', 'AMBA', 'NVS', 'ANF', 'LULU', 'RAD', 'BRK.AX', 'ARRY', 'AGNC', 'JBLU', 'A', 'ORLY', 'FOLD', 'AZO', 'AN', 'AZN', 'AES', 'BUD', 'ARR', 'BDX', 'AKS', 'AB', 'ACOR', 'CS', 'AFL', 'ADI', 'ACIW', 'AMP', 'AVP', 'AMTD', 'AEO', 'AWK', 'NVO', 'ALK', 'PAA', 'AAP', 'NAT', 'FNMA', 'AIV', 'AGIO', 'AEE', 'UBS', 'AVXL', 'ARLP', 'ANTM', 'AGU', 'AG', 'AFSI', 'ABC', 'STO', 'ATI', 'AVB', 'ATW', 'ALNY', 'LH', 'AVY', 'AUY', 'ASH']
 # print(len(foundList))
-noIssues = ['AAPL', 'BAC', 'AMZN', 'T', 'MO', 'DAL', 'AA', 'AXP', 'DD', 'BABA', 'ABT', 'AMAT', 'AMGN', 'AAL', 'AIG', 'ALL', 'ADBE', 'GOOGL', 'ACN', 'ABBV', 'LLY', 'AGN', 'APA', 'ADP', 'APC', 'AKAM', 'NLY', 'ABX', 'ATVI', 'ADSK', 'ADM', 'WBA', 'LUV', 'PANW', 'AET', 'AEP', 'ALXN', 'AVGO', 'EA', 'DB', 'AEM', 'APD', 'LULU', 'RAD', 'AGNC', 'A', 'ORLY', 'AZO', 'AES', 'ARR', 'BDX', 'AFL', 'ADI', 'AMP', 'AMTD', 'AWK', 'AAP', 'FNMA', 'AIV', 'AEE', 'UBS', 'ANTM', 'ABC', 'AVB', 'LH', 'AVY', 'ASH']
+noIssues = ['AAPL', 'BAC', 'AMZN', 'T', 'MO', 'DAL', 'AA', 'AXP', 'DD', 'BABA', 'ABT', 'AMAT', 'AMGN', 'AAL', 'AIG', 'ALL', 'ADBE', 'GOOGL', 'ACN', 'ABBV', 'LLY', 'APA', 'ADP', 'AKAM', 'NLY', 'ATVI', 'ADSK', 'ADM', 'WBA', 'LUV', 'PANW', 'AEP', 'AVGO', 'EA', 'DB', 'AEM', 'APD', 'LULU', 'RAD', 'AGNC', 'A', 'ORLY', 'AZO', 'AES', 'ARR', 'BDX', 'AFL', 'ADI', 'AMP', 'AMTD', 'AWK', 'AAP', 'FNMA', 'AIV', 'AEE', 'UBS', 'ANTM', 'ABC', 'AVB', 'LH', 'AVY', 'ASH']
 testList = ['AAPL', "GOOGL"]
 
 print(obtain_companies(noIssues))
