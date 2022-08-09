@@ -66,10 +66,15 @@ export default function UserReports() {
                                 >
                                     {mainDetail.CardHeader}
                                 </Text>
-                                <Text
-                                    color={textColorSecondary} fontSize='xl' mx='2rem' my='0.5rem'>
-                                    {mainDetail.CardBody}
-                                </Text>
+                                    <Text
+                                        dangerouslySetInnerHTML={mainDetail.CardBody}
+                                        color={textColorSecondary} fontSize='xl' mx='2rem' my='0.5rem'>
+                                        {/* {mainDetail.CardBody} */}
+                                    </Text>
+                                    {/* <Text color={textColorSecondary} fontSize='xl' mx='2rem' my='-0.1rem' style={{fontWeight: "bold"}}>
+                                        {mainDetail.BoldText}
+                                    </Text> */}
+                                    
                             </Flex>
 
                             <Image

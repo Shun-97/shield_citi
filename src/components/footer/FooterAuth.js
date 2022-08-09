@@ -36,7 +36,7 @@ export default function Footer() {
         {" "}
         &copy; {1900 + new Date().getYear()}
         <Text as='span' fontWeight='500' ms='4px'>
-          Dell Technologies - Team 7Rs - SMU
+          Citibank - S.H.I.E.L.D
         </Text>
       </Text>
       <List display='flex'>
