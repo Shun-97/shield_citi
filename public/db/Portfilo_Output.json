@@ -1,0 +1,25 @@
+[
+    {
+        "Id": 1,
+        "Equity": 50,
+        "Bonds": 20,
+        "Gold": 10,
+        "Saving Plans": 20
+    }
+    ,{
+        "Id": 2,
+        "Equity": 30,
+        "Bonds": 30,
+        "Gold": 10,
+        "Saving Plans": 30
+    }
+    ,{
+        "Id": 3,
+        "Equity": 10,
+        "Bonds": 35,
+        "Gold": 20,
+        "Saving Plans": 35
+    }
+      
+]
+  
