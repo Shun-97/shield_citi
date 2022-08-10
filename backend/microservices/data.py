@@ -4,7 +4,7 @@ import urllib.request
 import json
 
 
-class data:
+class Data:
 
     def __init__(self, ticker):
         self.ticker = ticker
@@ -46,28 +46,26 @@ class data:
 
     
     def getEsg_and_esgIndustry(self, ticker):
+        try: 
+            url = "https://query2.finance.yahoo.com/v1/finance/esgChart?symbol=" + ticker
+            connection = urllib.request.urlopen(url)
+            data = connection.read()
+            data_2 = json.loads(data)
+            
+            industry = data_2["esgChart"]["result"][0]["peerGroup"]
 
-            try: 
-                url = "https://query2.finance.yahoo.com/v1/finance/esgChart?symbol=" + ticker
+            Formatdata = data_2["esgChart"]["result"][0]["symbolSeries"]
+            total = Formatdata['esgScore'][-1]
+            env = Formatdata['environmentScore'][-1]
+            gov = Formatdata['governanceScore'][-1] 
+            soc = Formatdata['socialScore'][-1] 
 
-                connection = urllib.request.urlopen(url)
-
-                data = connection.read()
-                data_2 = json.loads(data)
-                industry = data_2["esgChart"]["result"][0]["peerGroup"]
-
-                Formatdata = data_2["esgChart"]["result"][0]["symbolSeries"]
-                total = Formatdata['esgScore'][-1]
-                env = Formatdata['environmentScore'][-1]
-                gov = Formatdata['governanceScore'][-1] 
-                soc = Formatdata['socialScore'][-1] 
-
-            except:
-                print(ticker + "'s ESG values cannot be found in yahoo")
-                return None
+        except:
+            print(ticker + "'s ESG values cannot be found in yahoo")
+            return None
 
 
-            return {"total": total, "env": env, "gov": gov, "soc": soc, "industry": industry}   
+        return {"total": total, "env": env, "gov": gov, "soc": soc, "industry": industry}   
 
 
 
@@ -77,7 +75,7 @@ def obtain_companies(ticketList):
         # companyDict = {}
 
         for ticker in ticketList:
-            created = data(ticker)
+            created = Data(ticker)
             companyList.append(str(created.json()))
 
         return companyList
