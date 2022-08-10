@@ -21,7 +21,8 @@ CREATE TABLE `equity` (
   `total` float DEFAULT NULL,
   `env` float DEFAULT NULL,
   `soc` float DEFAULT NULL,
-  `gov` float DEFAULT NULL
+  `gov` float DEFAULT NULL,
+  PRIMARY KEY (ticker)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 

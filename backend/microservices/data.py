@@ -1,4 +1,3 @@
-import pandas as pd
 from datetime import datetime as dt
 import urllib.request
 import json
@@ -36,7 +35,7 @@ class Data:
 
             data = connection.read()
             data_2 = json.loads(data)
-            price = data_2["quoteSummary"]["result"][0]["summaryDetail"]["open"]["fmt"]
+            price = data_2["quoteSummary"]["result"][0]["summaryDetail"]["previousClose"]["fmt"]
 
         except:
             print(ticker + "'s pricing cannot be found in yahoo")

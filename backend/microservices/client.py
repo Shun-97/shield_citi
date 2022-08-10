@@ -39,5 +39,10 @@ class Client(db.Model):
     gov = db.Column(db.Float, nullable=False)
 
 
-    def __init__(self, pid, isin, qty):
+    def __init__(self, cid, name):
+        
+        self.cid = cid
+        self.name = name
+      
 
+    
