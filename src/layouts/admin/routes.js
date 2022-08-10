@@ -5,6 +5,7 @@ import {
   MdBarChart,
   MdPerson,
   MdHome,
+  MdOutlineQuiz,
   MdLock,
   MdAssignment,
 } from "react-icons/md";
@@ -17,6 +18,7 @@ import SignInCentered from "views/auth/signIn";
 
 // Common import
 import Home from "views/common/home";
+import Quiz from "views/common/quiz";
 import Report from "views/common/report";
 
 const routes = [
@@ -33,6 +35,13 @@ const routes = [
     icon: <Icon as={MdBarChart} width='20px' height='20px' color='inherit' />,
     path: "/data-tables",
     component: DataTables,
+  },
+  {
+    name: "Personality Quiz",
+    layout: "/admin",
+    icon: <Icon as={MdOutlineQuiz} width='20px' height='20px' color='inherit' />,
+    path: "/quiz",
+    component: Quiz,
   },
   {
     name: "Report",

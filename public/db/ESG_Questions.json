@@ -1,0 +1,19 @@
+[
+    {
+        "Question_number": 1,
+        "Question": "How much do you value enthic representation and diversity in a workplace?",
+        "Choices": ["Not necessary at all.", "Good to have, but not a necessity. ","Important, but not a deal breaker.","Highly important for a workplace."]
+    }
+    ,{
+        "Question_number": 2,
+        "Question": "What kind of investor would you categorise yourself as?",
+        "Choices" : ["Returns above all else.", "While I view both returns and ethicality as high importance, I would value returns more than ethicality.", "While I view both returns and ethicality as high importance, I would value ethicality more than returns.", "I believe in investing in companies whose values and mission aligns with mine."]
+    }
+    ,{
+        "Question_number": 3,
+        "Question": "What do you think is the best way to combat climate change?",
+        "Choices": ["Large corporations and the affluent taking responsibility.", "It should be everyone’s responsibility.", "Responsibility should start from myself as well as influencing those around me to do the same."]
+    }
+      
+]
+  
