@@ -130,7 +130,7 @@ def getAll3():
 
     equityList = []
 
-    equityList = equity.query.all()
+    equityList = Equity.query.all()
 
     if (equityList):
         return jsonify(
