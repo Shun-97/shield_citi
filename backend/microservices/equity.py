@@ -169,7 +169,7 @@ def retrieveFromYahoo():
                 equity.total = values[ticker]["total"]
                 equity.soc = values[ticker]["soc"]
                 equity.gov = values[ticker]["gov"]
-                equity.industry = values[ticker]["industry"]
+                # equity.industry = values[ticker]["industry"]
                 db.session.commit()
 
     except:
