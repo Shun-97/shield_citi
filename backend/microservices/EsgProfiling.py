@@ -83,28 +83,45 @@ def calculate_Esg_Score():
             if a_data["Info"][0] == "G":
                 gov_score += a_data["Info"][1]
         
-        env_percentage = (env_score / (env_score + soc_score + gov_score)) * 100
-        soc_percentage = (soc_score / (env_score + soc_score + gov_score)) * 100
+        env_percentage = round((env_score / (env_score + soc_score + gov_score)) * 100)
+        soc_percentage = round((soc_score / (env_score + soc_score + gov_score)) * 100)
         gov_percentage = 100 - (env_percentage + soc_percentage)
 
-        if env_percentage + soc_percentage + gov_percentage > 100:
-            gov_percentage = math.floor(gov_percentage)
-        else:
-            gov_percentage = math.ceil(gov_percentage)
+        # if env_percentage + soc_percentage + gov_percentage > 100:
+        #     gov_percentage = math.floor(gov_percentage)
+        # else:
+        #     gov_percentage = math.ceil(gov_percentage)
 
-        if(env_percentage and soc_percentage and gov_percentage):
+        highestNum = 0
+        highestValue = ""
 
-            return jsonify(
-                {
-                    "code": 200,
-                    "data": {
-                        "env score" : math.floor(env_percentage),
-                        "soc score" : math.ceil(soc_percentage),
-                        "gov_score" : gov_percentage
-                    },
-                    "message": "Risk Appetite Score is tabulated"
-                }
-            ), 200
+        if highestNum < env_percentage:
+            highestNum = env_percentage
+            highestValue = "Environmental"
+
+        if highestNum < soc_percentage:
+            highestNum = soc_percentage
+            highestValue = "Social"
+
+        if highestNum < gov_percentage:
+            highestNum = gov_percentage
+            highestValue = "Governance"
+
+        # if(env_percentage and soc_percentage and gov_percentage):
+
+        return jsonify(
+            {
+                "code": 200,
+                "data": {
+                    "env score" : env_percentage,
+                    "soc score" : soc_percentage,
+                    "gov_score" : gov_percentage,
+                    "highest_score" : highestValue
+                    
+                },
+                "message": "Risk Appetite Score is tabulated"
+            }
+        ), 200
 
     except Exception as e:
         return jsonify(
