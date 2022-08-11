@@ -41,4 +41,4 @@ Running the application locally
 
 ### PRESENTATION DECK URL
 
-URL : https://docs.google.com/presentation/d/1WludffvHD6FrPv-gDMTzEUPI0Leb1-Xoo64Q7q5WXD8/edit?usp=sharing
+URL : https://docs.google.com/presentation/d/16fbAEHExZjlt4-oDwTSMSIqC5U-QkvhE/edit?usp=sharing&ouid=117177132329753680289&rtpof=true&sd=true
