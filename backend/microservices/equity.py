@@ -38,6 +38,7 @@ class Equity(db.Model):
     env = db.Column(db.Float, nullable=True)
     soc = db.Column(db.Float, nullable=True)
     gov = db.Column(db.Float, nullable=True)
+    industry = db.Column(db.Float, nullable=True)
 
 
     def __init__(self, ticker, name):
@@ -152,5 +153,5 @@ def getAll3():
     # User.username == currentuser).email
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5098, debug=True)
+    app.run(host='0.0.0.0', port=5006, debug=True)
 
