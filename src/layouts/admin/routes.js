@@ -45,13 +45,6 @@ const routes = [
     path: "/quiz",
     component: Quiz,
   },
-  // {
-  //   name: "KYC Quiz",
-  //   layout: "/admin",
-  //   icon: <Icon as={MdOutlineQuiz} width='20px' height='20px' color='inherit' />,
-  //   path: "/KYCquiz",
-  //   component: Quiz,
-  // },
   {
     name: "Report",
     layout: "/admin",
