@@ -25,6 +25,8 @@ import illustration from "assets/img/auth/auth.png";
 import { FcGoogle } from "react-icons/fc";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { RiEyeCloseLine } from "react-icons/ri";
+import { useHistory } from "react-router-dom";
+
 
 function SignIn() {
   // Chakra color mode
@@ -36,6 +38,8 @@ function SignIn() {
   const [isWrongPassword, setIsWrongPassword] = useState(false);
   const [isMissingInput, setIsMissingInput] = useState(false);
   let errorComponent = null;
+
+  let history = useHistory();
 
   if (isWrongPassword) {
     errorComponent = <Alert mb='2rem' status='error'>
@@ -67,6 +71,7 @@ function SignIn() {
     if (SignIn.userid === demoAccount.userid && SignIn.password === demoAccount.password) {
       localStorage.setItem('role', 'existing');
       localStorage.setItem('id', 1);
+      history.push("/admin/main");
     } else {
       if (SignIn.userid === "" || SignIn.password === "") {
         setIsMissingInput(true);
@@ -193,20 +198,18 @@ function SignIn() {
                 </Text>
               </NavLink>
             </Flex>
-            <NavLink to='/admin/KYCquiz'>
-            <Button
-              fontSize='sm'
-              variant='brand'
-              fontWeight='500'
-              w='100%'
-              h='50'
-              mb='24px'
-              onClick={handleSignIn}
-            >
-              Sign In
-            </Button>
-            </NavLink>
-            
+              <Button
+                fontSize='sm'
+                variant='brand'
+                fontWeight='500'
+                w='100%'
+                h='50'
+                mb='24px'
+                onClick={handleSignIn}
+              >
+                Sign In
+              </Button>
+
           </FormControl>
           <Flex
             flexDirection='column'
@@ -225,6 +228,7 @@ function SignIn() {
                   Create an Account
                 </Text>
               </NavLink>
+
             </Text>
           </Flex>
         </Flex>

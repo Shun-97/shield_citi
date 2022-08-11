@@ -5,13 +5,14 @@ import {
     useColorModeValue,
     SimpleGrid,
     Text,
-    Image,
+    Spacer,
     Circle,
-    Square,
+    Button,
     HStack
 } from "@chakra-ui/react";
 
 // Assets
+import { useHistory } from "react-router-dom";
 
 
 // Custom components
@@ -48,6 +49,8 @@ export default function UserReports() {
         console.log(qnAnswer)
         submitQuiz(qnAnswer)
     }
+    let history = useHistory();
+
 
     const submitQuiz = () =>{
         console.log("now sending to BE")
@@ -63,7 +66,9 @@ export default function UserReports() {
             )
         }).then(res=>res.json())
         .then(data =>{
-            console.log(data)
+            console.log(data.data.riskAppetiteScore)
+            localStorage.setItem("riskAppetiteScore", data.data.riskAppetiteScore)
+            history.push("/admin/quiz");
         })
 
     }
@@ -154,10 +159,11 @@ export default function UserReports() {
     return (
         <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
             <Card boxShadow={cardShadow}
+                width= "100%"
                 my='1rem'
-                mx='2rem'>
+                mx='auto'>
                 <Flex direction='column'  >
-                    <HStack mx='auto' justifyContent="center" >
+                    <HStack mx='auto' my= '2rem' justifyContent="center" >
                         {
                             quesCount.map((number, key) => {
                                 let circleComponent = <Circle key={key} size='40px' color='black'>{number}</Circle>
@@ -172,45 +178,46 @@ export default function UserReports() {
                             })
                         }
                     </HStack>
-                    <Text
-                        color={textColorPrimary}
-                        fontWeight='bold'
-                        fontSize='3xl'
-                        my='0.5rem'
-                        mx='1rem'
-                    >
-                        {`Q${AllQn[CurrentQn].Question_number}`}
-                    </Text>
-                    <Text
-                        color={textColorSecondary} fontSize='xl' mx='2rem' my='0.5rem'>
-                        {`${AllQn[CurrentQn].Question}`}
-                    </Text>
-                    <HStack>
-                        {
-                            AllQn[CurrentQn].Choices.map((choice, key) => {
-                                // console.log(CurrentselectedChoice)
-                                // console.log(key)
-                                // console.log(choice)
-                                console.log(CurrentQn)
-                                let circleComponent = <Circle key={key} size='40px' bg='#dfe7e3' color="white"onClick= {(e) => storeChoice(choice,CurrentQn)} >{mcq[key]}</Circle>
-                                if (CurrentselectedChoice === key && CurrentQn !== 8) {
-                                    circleComponent = <Circle key={key} size='40px' bg="#b3b9b6" color='white' onClick= {(e) => storeChoice(choice,CurrentQn)}>{mcq[key]}</Circle>
-                                }
-                                return (
-                                    <div onClick={() => changeSelectedChoice(key)}>
-                                        {circleComponent}
-                                        {choice[0]}
-                                    </div>
-                                )
-                            })
-                        }
-                    </HStack>
+                    <Flex my= '4rem' direction='row'>
+                        <Flex direction = 'column' w = '50%' borderRight='1px'>
+                            <Text
+                                color={textColorPrimary}
+                                fontWeight='bold'
+                                fontSize='3xl'
+                                my='0.5rem'
+                                mx='3rem'
+                            >
+                                {`Q${AllQn[CurrentQn].Question_number}`}
+                            </Text>
+                            <Text
+                                color={textColorSecondary} fontSize='xl' mx='4rem' my='0.5rem'>
+                                {`${AllQn[CurrentQn].Question}`}
+                            </Text>
+                        </Flex>
+                        <Spacer />
+                        <Flex direction = 'column' w = '40%' align-items="flex-start">
+                            {
+                                AllQn[CurrentQn].Choices.map((choice, key) => {
+                                    // console.log(CurrentselectedChoice)
+                                    let circleComponent = <Circle key={key} my= '1rem' mx = "1rem" size='40px' bg='#dfe7e3' color="white" onClick={(e) => storeChoice(choice, CurrentQn)} >{mcq[key]}</Circle>
+                                    if (CurrentselectedChoice === key) {
+                                        circleComponent = <Circle key={key} my= '1rem' mx = "1rem" size='40px' bg="#b3b9b6" color='white' onClick={(e) => storeChoice(choice, CurrentQn)}>{mcq[key]}</Circle>
+                                    }
+                                    return (
+                                        <Flex alignItems='center' onClick={() => changeSelectedChoice(key)}>
+                                            {circleComponent}
+                                            <Text my= '1rem' mr ='3rem'>{choice[0]}</Text>
+                                        </Flex>
 
+                                    )
+
+                                })
+                            }
+                        </Flex>
+                    </Flex>
                 </Flex>
-                <Flex color={textColorSecondary} fontSize='xl' mx='auto' float="left" my='5rem' bg="#b3b9b6" display="flex">
-                    <form onSubmit={handleSubmit}>
-                        <button type="submit"> Submit Quiz </button>
-                    </form>
+                <Flex color={textColorSecondary} mx='auto' my='5rem' display="flex">
+                        <Button onClick={handleSubmit} colorScheme='purple'> Submit Quiz </Button>
                 </Flex>
             </Card>
 

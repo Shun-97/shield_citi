@@ -4,9 +4,9 @@
         "CardBody": {
         "__html": "With self-directed investing being more and more accessible and prevalent, it is common for investors such as yourself to be tempted by high risk high reward investments. Instead of hinging your investments in an unpredictable and volatile market, we believe that diversification of your portfolio is a much more stable and sound approach to investing. By diversification, you can reduce the risk of a single asset class’s performance affecting your entire portfolio while also being able to hedge your riskier investments. One such method of diversification could be using <b>ESG</b>."
         },
-        "Image": "/mainImage/Working.png",
+        "Image": "/mainImage/4.png",
         "ImageAlt": "Working",
-        "ImageHeight": "10rem",
+        "ImageHeight": "15rem",
         "ImageWidth": "auto",
         "Position": "Left"
     }
@@ -15,9 +15,9 @@
         "CardBody": {
             "__html": "ESG stands for Environment, Social and Governance and they act as non-financial factors for investors to evaluate if the companies they are investing in are acting responsibly and ethically. Criterias can range from carbon emissions, gender and diversity, energy efficiency to presence of whistleblower schemes within the company. Generally, companies with high ESG scores are managing their ESG risk well. More ESG criterias can be found <a href='https://www.investopedia.com/terms/e/environmental-social-and-governance-esg-criteria.asp' target='_blank'><u>here</u></a>!"
             },
-        "Image": "/mainImage/Working.png",
+        "Image": "/mainImage/ESG.png",
         "ImageAlt": "Working",
-        "ImageHeight": "10rem",
+        "ImageHeight": "15rem",
         "ImageWidth": "auto",
         "Position": "Right"
 
@@ -27,9 +27,9 @@
         "CardBody": {
             "__html": "ESG analysis helps investors to determine the risk and growth opportunities of companies as companies with high ESG scores tend to be more stable in terms of growth and returns due to their sustainable business practices. In fact the long held misconception that sustainability comes with a price of lower investment returns is false as <b>companies with high ESG scores are actually <u>significantly outperforming their peers</u></b>. Whether you're a strong believer in battling climate change, protecting social welfare or just an investor looking to diversify your portfolio, there is no better time to get into ESG investing than now!"
             },
-        "Image": "/mainImage/Working.png",
+        "Image": "/mainImage/5.png",
         "ImageAlt": "Working",
-        "ImageHeight": "10rem",
+        "ImageHeight": "15rem",
         "ImageWidth": "auto",
         "Position": "Left"
     }

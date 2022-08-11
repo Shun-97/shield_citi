@@ -24,8 +24,8 @@ CREATE TABLE `CUST_ESG_SCORE` (
 
 
 INSERT INTO `CUST_ESG_SCORE` (`cid`, `env`, `soc`, `gov`) VALUES
-(1, 48.0, 30.3, 22.5),
-(2, 32.0, 12.3, 43.2),
+(1, 48.2, 30.3, 22.5),
+(2, 32.5, 12.3, 43.2),
 (3, 25.5, 17.9, 23.5);
 
 COMMIT;
