@@ -10,13 +10,12 @@ SET time_zone = "+08:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
-DROP DATABASE IF EXISTS `client`;
-CREATE DATABASE `client`;
-USE `client`;
-DROP TABLE IF EXISTS `client`;
-CREATE TABLE `client` (
+DROP DATABASE IF EXISTS `CUST_ESG_SCORE`;
+CREATE DATABASE `CUST_ESG_SCORE`;
+USE `CUST_ESG_SCORE`;
+DROP TABLE IF EXISTS `CUST_ESG_SCORE`;
+CREATE TABLE `CUST_ESG_SCORE` (
   `cid` int NOT NULL,
-  `name` varchar(120) NOT NULL,
   `env` float DEFAULT NULL,
   `soc` float DEFAULT NULL,
   `gov` float DEFAULT NULL
@@ -24,8 +23,10 @@ CREATE TABLE `client` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO `client` (`cid`, `name`, `env`, `soc`, `gov`) VALUES
-('1', 'John Chia Ming Hai', 48, 30, 22);
+INSERT INTO `CUST_ESG_SCORE` (`cid`, `env`, `soc`, `gov`) VALUES
+(1, 48.0, 30.3, 22.5),
+(2, 32.0, 12.3, 43.2),
+(3, 25.5, 17.9, 23.5);
 
 COMMIT;
 
