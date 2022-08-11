@@ -1,0 +1,848 @@
+AMGN	Amgen Inc.	Biotechnology
+ARNA	Arena Pharmaceuticals, Inc.	Biotechnology
+ACAD	ACADIA Pharmaceuticals Inc.	Biotechnology
+ALXN	Alexion Pharmaceuticals, Inc.	Biotechnology
+ARRY	Array BioPharma Inc.	Biotechnology
+FOLD	Amicus Therapeutics, Inc.	Biotechnology
+ACOR	Acorda Therapeutics, Inc.	Biotechnology
+AGIO	Agios Pharmaceuticals, Inc.	Biotechnology
+AVXL	Anavex Life Sciences Corp.	Biotechnology
+STO	Statoil ASA	Major Integrated Oil & Gas
+ALNY	Alnylam Pharmaceuticals, Inc.	Biotechnology
+ACHN	Achillion Pharmaceuticals, Inc.	Biotechnology
+LIFE	aTyr Pharma, Inc.	Biotechnology
+ADXS	Advaxis, Inc.	Biotechnology
+ALDR	Alder Biopharmaceuticals, Inc.	Biotechnology
+AGEN	Agenus Inc.	Biotechnology
+ANTH	Anthera Pharmaceuticals, Inc.	Biotechnology
+AMPE	Ampio Pharmaceuticals, Inc.	Biotechnology
+XLRN	Acceleron Pharma Inc.	Biotechnology
+ATHX	Athersys, Inc.	Biotechnology
+ARWR	Arrowhead Pharmaceuticals, Inc.	Biotechnology
+AKBA	Akebia Therapeutics, Inc.	Biotechnology
+AEZS	Aeterna Zentaris Inc.	Biotechnology
+ACST	Acasti Pharma Inc.	Biotechnology
+AMBS	Amarantus Bioscience Holdings, Inc	Biotechnology
+AVEO	AVEO Pharmaceuticals, Inc.	Biotechnology
+PETX	Aratana Therapeutics, Inc.	Biotechnology
+ARDX	Ardelyx, Inc.	Biotechnology
+ADHD	Alcobra Ltd.	Biotechnology
+ANIK	Anika Therapeutics, Inc.	Biotechnology
+ATNM	Actinium Pharmaceuticals, Inc.	Biotechnology
+ADRO	Aduro BioTech, Inc.	Biotechnology
+AST	Asterias Biotherapeutics, Inc.	Biotechnology
+ANIP	ANI Pharmaceuticals, Inc.	Biotechnology
+AMRI	Albany Molecular Research, Inc.	Biotechnology
+ADMA	ADMA Biologics, Inc.	Biotechnology
+JAGX	Jaguar Health, Inc.	Biotechnology
+APHB	AmpliPhi Biosciences Corporation	Biotechnology
+ANW	Aegean Marine Petroleum Network Inc.	Major Integrated Oil & Gas
+AKAO	Achaogen, Inc.	Biotechnology
+ABIO	ARCA biopharma, Inc.	Biotechnology
+FWP	Forward Pharma A/S	Biotechnology
+ARQL	ArQule, Inc.	Biotechnology
+ADAP	Adaptimmune Therapeutics plc	Biotechnology
+ALDX	Aldeyra Therapeutics, Inc.	Biotechnology
+ABUS	Arbutus Biopharma Corporation	Biotechnology
+ABLX.BR	Ablynx NV	Biotechnology
+AXON	Axovant Sciences Ltd.	Biotechnology
+EARS	Auris Medical Holding AG	Biotechnology
+ASND	Ascendis Pharma A/S	Biotechnology
+AFMD	Affimed N.V.	Biotechnology
+AFFY	Affymax, Inc.	Biotechnology
+AIMT	Aimmune Therapeutics, Inc.	Biotechnology
+PZE	Petrobras Argentina S.A.	Major Integrated Oil & Gas
+ORG.AX	Origin Energy Limited	Major Integrated Oil & Gas
+TGRO	Tiger Oil and Energy, Inc.	Major Integrated Oil & Gas
+STL.OL	Statoil ASA	Major Integrated Oil & Gas
+LCT.AX	Living Cell Technologies Limited	Biotechnology
+APBR.BA	Petróleo Brasileiro S.A. - Petrobras	Major Integrated Oil & Gas
+ALSE	Alseres Pharmaceuticals, Inc.	Biotechnology
+ALEHT.PA	Diaxonhit	Biotechnology
+ADLS	Advanced Life Sciences Holdings, Inc.	Biotechnology
+SUD.AX	Suda Limited	Biotechnology
+IMU.AX	Imugene Limited	Biotechnology
+ARNI	Arno Therapeutics, Inc.	Biotechnology
+AMAR	Amarillo Biosciences, Inc.	Biotechnology
+PYC.AX	Phylogica Limited	Biotechnology
+GEN.CO	Genmab A/S	Biotechnology
+CSL.AX	CSL Limited	Biotechnology
+CRYO	American Cryostem Corporation	Biotechnology
+ABC.L	Abcam Plc	Biotechnology
+BP	BP p.l.c.	Major Integrated Oil & Gas
+BIIB	Biogen Inc.	Biotechnology
+GNCA	Genocea Biosciences, Inc.	Biotechnology
+BDSI	BioDelivery Sciences International, Inc.	Biotechnology
+GALE	Galena Biopharma, Inc.	Biotechnology
+BTX	BioTime, Inc.	Biotechnology
+BMRN	BioMarin Pharmaceutical Inc.	Biotechnology
+PDLI	PDL BioPharma, Inc.	Biotechnology
+HEB	Hemispherx Biopharma, Inc.	Biotechnology
+KERX	Keryx Biopharmaceuticals, Inc.	Biotechnology
+PACB	Pacific Biosciences of California, Inc.	Biotechnology
+BLCM	Bellicum Pharmaceuticals, Inc.	Biotechnology
+PBYI	Puma Biotechnology, Inc.	Biotechnology
+EBS	Emergent BioSolutions Inc.	Biotechnology
+BLUE	bluebird bio, Inc.	Biotechnology
+BCRX	BioCryst Pharmaceuticals, Inc.	Biotechnology
+SYN	Synthetic Biologics, Inc.	Biotechnology
+NWBO	Northwest Biotherapeutics, Inc.	Biotechnology
+SGMO	Sangamo Therapeutics, Inc.	Biotechnology
+CTIC	CTI BioPharma Corp.	Biotechnology
+TECH	Bio-Techne Corporation	Biotechnology
+NAVB	Navidea Biopharmaceuticals, Inc	Biotechnology
+CALA	Calithera Biosciences, Inc.	Biotechnology
+HTBX	Heat Biologics, Inc.	Biotechnology
+EBIO	Eleven Biotherapeutics, Inc.	Biotechnology
+CANF	Can-Fite BioPharma Ltd.	Biotechnology
+PLX	Protalix BioTherapeutics, Inc.	Biotechnology
+CBLI	Cleveland BioLabs, Inc.	Biotechnology
+KIN	Kindred Biosciences, Inc.	Biotechnology
+ORPN	Bioblast Pharma Ltd.	Biotechnology
+GBT	Global Blood Therapeutics Inc.	Biotechnology
+CBPO	China Biologic Products Holdings, Inc.	Biotechnology
+BSTC	BioSpecifics Technologies Corp.	Biotechnology
+SVA	Sinovac Biotech Ltd.	Biotechnology
+FBIO	Fortress Biotech, Inc.	Biotechnology
+CHRS	Coherus Biosciences, Inc.	Biotechnology
+BCLI	Brainstorm Cell Therapeutics Inc.	Biotechnology
+CLRB	Cellectar Biosciences, Inc.	Biotechnology
+CXR.TO	Concordia International Corp.	Biotechnology
+BPMC	Blueprint Medicines Corporation	Biotechnology
+TBPH	Theravance Biopharma, Inc.	Biotechnology
+BPMX	BioPharmX Corporation	Biotechnology
+BLPH	Bellerophon Therapeutics, Inc.	Biotechnology
+PBMD	Prima Biomed Ltd.	Biotechnology
+CBIO	Catalyst Biosciences, Inc.	Biotechnology
+SU.TO	Suncor Energy Inc.	Major Integrated Oil & Gas
+PLPL	Plandaí Biotechnology, Inc.	Biotechnology
+MBX.TO	Microbix Biosystems Inc.	Biotechnology
+BP.L	BP p.l.c.	Major Integrated Oil & Gas
+PETR4.SA	Petróleo Brasileiro S.A. - Petrobras	Major Integrated Oil & Gas
+CVE.TO	Cenovus Energy Inc.	Major Integrated Oil & Gas
+PRGB	Protea Biosciences Group, Inc	Biotechnology
+NRI.TO	Nuvo Pharmaceuticals Inc.	Biotechnology
+COM.TO	Cardiome Pharma Corp.	Biotechnology
+BIEI	Premier Biomedical, Inc.	Biotechnology
+RGBP	Regen BioPharma, Inc.	Biotechnology
+PEBI.L	Port Erin Biopharma Investments Limited	Biotechnology
+BTHE	Boston Therapeutics, Inc.	Biotechnology
+UCB.BR	UCB SA	Biotechnology
+PDP.V	Pediapharm Inc.	Biotechnology
+OMBP	Omni Bio Pharmaceutical, Inc.	Biotechnology
+OGI.V	OrganiGram Holdings Inc.	Biotechnology
+NPC.TO	NAPEC Inc.	Biotechnology
+IMV.TO	ImmunoVaccine Inc.	Biotechnology
+IGX.V	IntelGenx Technologies Corp.	Biotechnology
+ENUM	Enumeral Biomedical Holdings, Inc.	Biotechnology
+XON	Intrexon Corporation	Biotechnology
+XOM	Exxon Mobil Corporation	Major Integrated Oil & Gas
+CVX	Chevron Corporation	Major Integrated Oil & Gas
+CELG	Celgene Corporation	Biotechnology
+GERN	Geron Corporation	Biotechnology
+MNKD	MannKind Corporation	Biotechnology
+CLDX	Celldex Therapeutics, Inc.	Biotechnology
+XOMA	XOMA Corporation	Biotechnology
+INCY	Incyte Corporation	Biotechnology
+SNP	China Petroleum & Chemical Corporation	Major Integrated Oil & Gas
+CYTX	Cytori Therapeutics, Inc.	Biotechnology
+CEMP	Cempra, Inc.	Biotechnology
+JAZZ	Jazz Pharmaceuticals Public Limited Company	Biotechnology
+CLVS	Clovis Oncology, Inc.	Biotechnology
+ECA	Encana Corporation	Major Integrated Oil & Gas
+CBM	Cambrex Corporation	Biotechnology
+CARA	Cara Therapeutics, Inc.	Biotechnology
+NLNK	NewLink Genetics Corporation	Biotechnology
+CYTR	CytRx Corporation	Biotechnology
+CMRX	Chimerix, Inc.	Biotechnology
+CERS	Cerus Corporation	Biotechnology
+PTR	PetroChina Company Limited	Major Integrated Oil & Gas
+PRTA	Prothena Corporation plc	Biotechnology
+CRIS	Curis, Inc.	Biotechnology
+CNAT	Conatus Pharmaceuticals Inc.	Biotechnology
+DVAX	Dynavax Technologies Corporation	Biotechnology
+CRMD	CorMedix, Inc.	Biotechnology
+CYAN	Cyanotech Corporation	Biotechnology
+CLSN	Celsion Corporation	Biotechnology
+CORT	Corcept Therapeutics Incorporated	Biotechnology
+MNGA	MagneGas Corporation	Major Integrated Oil & Gas
+CYTK	Cytokinetics, Incorporated	Biotechnology
+NVIV	InVivo Therapeutics Holdings Corp.	Biotechnology
+COOL	PolarityTE, Inc.	Biotechnology
+XXII	22nd Century Group, Inc.	Biotechnology
+OMER	Omeros Corporation	Biotechnology
+CVM	CEL-SCI Corporation	Biotechnology
+CORI	Corium International, Inc.	Biotechnology
+CDTX	Cidara Therapeutics, Inc.	Biotechnology
+CCXI	ChemoCentryx, Inc.	Biotechnology
+VCEL	Vericel Corporation	Biotechnology
+TLOG	TetraLogic Pharmaceuticals Corporation	Biotechnology
+CTRV	ContraVir Pharmaceuticals, Inc.	Biotechnology
+CBAY	Cymabay Therapeutics, Inc.	Biotechnology
+CNCE	Concert Pharmaceuticals, Inc.	Biotechnology
+CHMA	Chiasma, Inc.	Biotechnology
+CASI	CASI Pharmaceuticals, Inc.	Biotechnology
+CAPR	Capricor Therapeutics, Inc.	Biotechnology
+OPHT	Ophthotech Corporation	Biotechnology
+LJPC	La Jolla Pharmaceutical Company	Biotechnology
+ITEK	Inotek Pharmaceuticals Corporation	Biotechnology
+CSBR	iShares MSCI Brazil ETF USD Acc	Biotechnology
+RXII	RXi Pharmaceuticals Corporation	Biotechnology
+RGEN	Repligen Corporation	Biotechnology
+EGLT	Egalet Corporation	Biotechnology
+CGEN	Compugen Ltd.	Biotechnology
+CDXS	Codexis, Inc.	Biotechnology
+CUR	Neuralstem, Inc.	Biotechnology
+RDS-B	Royal Dutch Shell plc	Major Integrated Oil & Gas
+DRNA	Dicerna Pharmaceuticals, Inc.	Biotechnology
+DERM	Dermira, Inc.	Biotechnology
+RDSB.L	Royal Dutch Shell plc	Major Integrated Oil & Gas
+VODG	Vitro Diagnostics, Inc.	Biotechnology
+MOR.DE	Morphosys AG	Biotechnology
+RDSB.MX	Royal Dutch Shell plc	Major Integrated Oil & Gas
+RDSA.AS	Royal Dutch Shell plc	Major Integrated Oil & Gas
+HDVY	Health Discovery Corporation	Biotechnology
+DDDD.L	4D pharma plc	Biotechnology
+TUB.BR	Financière de Tubize S.A.	Biotechnology
+RDSA.MX	Royal Dutch Shell plc	Major Integrated Oil & Gas
+R6C3.DE	Royal Dutch Shell plc	Major Integrated Oil & Gas
+MOR.MU	MORPHOSYS AG O.N.	Biotechnology
+DGJI	Dragon Jade International Limited	Biotechnology
+DBV.PA	DBV Technologies S.A.	Biotechnology
+CE2.DE	CropEnergies AG	Major Integrated Oil & Gas
+C4XD.L	C4X Discovery Holdings plc	Biotechnology
+BIO3.DE	Biotest Aktiengesellschaft	Biotechnology
+V3V.MU	VITA 34 AG NA O.N.	Biotechnology
+V3V.DU	VITA 34 AG NA O.N.	Biotechnology
+V3V.DE	VITA 34 AG	Biotechnology
+RHO5.BE	ROCHE HLDG AG GEN.	Biotechnology
+RDSB.AS	Royal Dutch Shell plc	Major Integrated Oil & Gas
+R6C3.SG	Royal Dutch Shell Reg. Shares C	Major Integrated Oil & Gas
+R6C3.F	Royal Dutch Shell plc	Major Integrated Oil & Gas
+R6C2.SG	Royal Dutch Shell Reg.Sh.B (Spo	Major Integrated Oil & Gas
+R6C1.DE	Royal Dutch Shell plc	Major Integrated Oil & Gas
+R6C1.BE	ROYAL DUTCH SHELL A ADR/2	Major Integrated Oil & Gas
+R6C.DE	Royal Dutch Shell plc	Major Integrated Oil & Gas
+PA8.F	Paion AG	Biotechnology
+MGN.BE	MOLOGEN AG	Biotechnology
+HZD.L	Horizon Discovery Group plc	Biotechnology
+HMGN	Hemagen Diagnostics Inc.	Biotechnology
+FYB.SG	Formycon AG Inhaber-Aktien o.N.	Biotechnology
+EXEL	Exelixis, Inc.	Biotechnology
+ESPR	Esperion Therapeutics, Inc.	Biotechnology
+EC	Ecopetrol S.A.	Major Integrated Oil & Gas
+ECYT	Endocyte, Inc.	Biotechnology
+E	Eni S.p.A.	Major Integrated Oil & Gas
+ENTA	Enanta Pharmaceuticals, Inc.	Biotechnology
+ENZN	Enzon Pharmaceuticals, Inc.	Biotechnology
+EQGP	EQT GP Holdings, LP	Major Integrated Oil & Gas
+EVGN	Evogene Ltd.	Biotechnology
+EPZM	Epizyme, Inc.	Biotechnology
+EYEG	Eyegate Pharmaceuticals, Inc.	Biotechnology
+ENZY	Enzymotec Ltd.	Biotechnology
+HSE.TO	Husky Energy Inc.	Major Integrated Oil & Gas
+EMIS	Emisphere Technologies, Inc.	Biotechnology
+REP.MC	Repsol, S.A.	Major Integrated Oil & Gas
+ENI1.DE	Eni S.p.A.	Major Integrated Oil & Gas
+XL.V	XXL Energy Corp.	Major Integrated Oil & Gas
+RAREF	Canada Rare Earth Corp.	Biotechnology
+ERYP.PA	Erytech Pharma Société Anonyme	Biotechnology
+ERGO	Entia Biosciences, Inc	Biotechnology
+ERGO.L	Ergomed plc	Biotechnology
+ERG.MI	ERG S.p.A.	Major Integrated Oil & Gas
+ENI.MI	Eni S.p.A.	Major Integrated Oil & Gas
+ELPE.AT	Hellenic Petroleum S.A.	Major Integrated Oil & Gas
+ALM.MC	Almirall, S.A.	Biotechnology
+XONA.DU	EXXON MOBIL CORP.	Major Integrated Oil & Gas
+XONA.DE	Exxon Mobil Corporation	Major Integrated Oil & Gas
+XOM.MX	Exxon Mobil Corporation	Major Integrated Oil & Gas
+FATE	Fate Therapeutics, Inc.	Biotechnology
+FPRX	Five Prime Therapeutics, Inc.	Biotechnology
+FOMX	Foamix Pharmaceuticals Ltd.	Biotechnology
+FLKS	Flex Pharma, Inc.	Biotechnology
+FGEN	FibroGen, Inc.	Biotechnology
+TOT.MI	TOTAL S.A.	Major Integrated Oil & Gas
+IFUE	Fuel Performance Solutions, Inc.	Major Integrated Oil & Gas
+TOTB.DE	TOTAL S.A.	Major Integrated Oil & Gas
+FP.PA	TOTAL S.A.	Major Integrated Oil & Gas
+COX.PA	Nicox S.A.	Biotechnology
+TTA.L	TOTAL S.A.	Major Integrated Oil & Gas
+IPH.PA	Innate Pharma S.A.	Biotechnology
+FPMI	FluoroPharma Medical, Inc.	Biotechnology
+ALGEN.PA	genOway Société Anonyme	Biotechnology
+ALCLS.PA	Cellectis S.A.	Biotechnology
+VLAP.PA	Valneva SE	Biotechnology
+TNG.PA	Transgene SA	Biotechnology
+GILD	Gilead Sciences, Inc.	Biotechnology
+SGEN	Seattle Genetics, Inc.	Biotechnology
+GLMD	Galmed Pharmaceuticals Ltd.	Biotechnology
+GBIM	GlobeImmune, Inc.	Biotechnology
+GLYC	GlycoMimetics, Inc.	Biotechnology
+GTXI	GTx, Inc.	Biotechnology
+GOVX	GeoVax Labs, Inc.	Biotechnology
+GEOR	GeoPetro Resources Company	Major Integrated Oil & Gas
+GNS.L	Genus plc	Biotechnology
+CRXM	Taxus Cardium Pharmaceuticals Group, Inc.	Biotechnology
+PHARM.AS	Pharming Group N.V.	Biotechnology
+PANG	Panacea Global, Inc.	Biotechnology
+GTHR	GeneThera, Inc.	Biotechnology
+VER.L	Vernalis plc	Biotechnology
+MTPH.L	Midatech Pharma Plc	Biotechnology
+TRX.L	Tissue Regenix Group plc	Biotechnology
+NSCI.L	NetScientific plc	Biotechnology
+OPK	Opko Health, Inc.	Biotechnology
+RDUS	Radius Health, Inc.	Biotechnology
+HALO	Halozyme Therapeutics, Inc.	Biotechnology
+CRBP	Corbus Pharmaceuticals Holdings, Inc.	Biotechnology
+HSGX	Histogenics Corporation	Biotechnology
+SPL.AX	Starpharma Holdings Limited	Biotechnology
+RHO5.DE	Roche Holding AG	Biotechnology
+REGN	Regeneron Pharmaceuticals, Inc.	Biotechnology
+INO	Inovio Pharmaceuticals, Inc.	Biotechnology
+VRTX	Vertex Pharmaceuticals Incorporated	Biotechnology
+ILMN	Illumina, Inc.	Biotechnology
+SRPT	Sarepta Therapeutics, Inc.	Biotechnology
+ICPT	Intercept Pharmaceuticals, Inc.	Biotechnology
+ZIOP	ZIOPHARM Oncology, Inc.	Biotechnology
+VVUS	VIVUS, Inc.	Biotechnology
+NVAX	Novavax, Inc.	Biotechnology
+OVAS	OvaScience, Inc.	Biotechnology
+JUNO	Juno Therapeutics, Inc.	Biotechnology
+PTCT	PTC Therapeutics, Inc.	Biotechnology
+LGND	Ligand Pharmaceuticals Incorporated	Biotechnology
+PTLA	Portola Pharmaceuticals, Inc.	Biotechnology
+SPPI	Spectrum Pharmaceuticals, Inc.	Biotechnology
+RARE	Ultragenyx Pharmaceutical Inc.	Biotechnology
+PPHM	Peregrine Pharmaceuticals, Inc.	Biotechnology
+INFI	Infinity Pharmaceuticals, Inc.	Biotechnology
+IMGN	ImmunoGen, Inc.	Biotechnology
+IDRA	Idera Pharmaceuticals, Inc.	Biotechnology
+ONCE	Spark Therapeutics, Inc.	Biotechnology
+SRNE	Sorrento Therapeutics, Inc.	Biotechnology
+OSIR	Osiris Therapeutics, Inc.	Biotechnology
+MRTX	Mirati Therapeutics, Inc.	Biotechnology
+MCRB	Seres Therapeutics, Inc.	Biotechnology
+INSY	INSYS Therapeutics, Inc.	Biotechnology
+IMMU	Immunomedics, Inc.	Biotechnology
+RGLS	Regulus Therapeutics Inc.	Biotechnology
+ONTX	Onconova Therapeutics, Inc.	Biotechnology
+MACK	Merrimack Pharmaceuticals, Inc.	Biotechnology
+KITE	Kite Pharma, Inc.	Biotechnology
+VICL	Vical Incorporated	Biotechnology
+OHRP	Ohr Pharmaceutical, Inc.	Biotechnology
+ZFGN	Zafgen, Inc.	Biotechnology
+LXRX	Lexicon Pharmaceuticals, Inc.	Biotechnology
+VNDA	Vanda Pharmaceuticals Inc.	Biotechnology
+PGNX	Progenics Pharmaceuticals, Inc.	Biotechnology
+ONCS	OncoSec Medical Incorporated	Biotechnology
+IBIO	iBio, Inc.	Biotechnology
+XBIT	XBiotech Inc.	Biotechnology
+SNSS	Sunesis Pharmaceuticals, Inc.	Biotechnology
+RPRX	Repros Therapeutics Inc.	Biotechnology
+RNN	Rexahn Pharmaceuticals, Inc.	Biotechnology
+PSTI	Pluristem Therapeutics Inc.	Biotechnology
+INSM	Insmed Incorporated	Biotechnology
+IMUC	ImmunoCellular Therapeutics, Ltd.	Biotechnology
+TGTX	TG Therapeutics, Inc.	Biotechnology
+SAGE	Sage Therapeutics, Inc.	Biotechnology
+PTIE	Pain Therapeutics, Inc.	Biotechnology
+OCUL	Ocular Therapeutix, Inc.	Biotechnology
+OCRX	Ocera Therapeutics, Inc.	Biotechnology
+IMO	Imperial Oil Limited	Major Integrated Oil & Gas
+RVNC	Revance Therapeutics, Inc.	Biotechnology
+NK	NantKwest, Inc.	Biotechnology
+NERV	Minerva Neurosciences, Inc.	Biotechnology
+IMMY	Imprimis Pharmaceuticals, Inc.	Biotechnology
+VSTM	Verastem, Inc.	Biotechnology
+PRTK	Paratek Pharmaceuticals, Inc.	Biotechnology
+NBY	NovaBay Pharmaceuticals, Inc.	Biotechnology
+ITCI	Intra-Cellular Therapies, Inc.	Biotechnology
+SHP.L	Shire plc	Biotechnology
+ROSN.L	Public Joint Stock Company Rosneft Oil Company	Major Integrated Oil & Gas
+LKOH.L	PJSC LUKOIL	Major Integrated Oil & Gas
+CIR.L	Circassia Pharmaceuticals Plc	Biotechnology
+S7E.DU	SHIRE PLC LS-,05	Biotechnology
+S7E.MU	SHIRE PLC LS-,05	Biotechnology
+S7E.DE	Shire plc	Biotechnology
+OGZD.L	Public Joint Stock Company Gazprom	Major Integrated Oil & Gas
+KMPH	KemPharm, Inc.	Biotechnology
+KDUS	Cadus Corporation	Biotechnology
+KARO.ST	Karo Pharma AB (publ)	Biotechnology
+TILS.L	Tiziana Life Sciences PLC	Biotechnology
+0775.HK	CKLIFE SCIENCES	Biotechnology
+SSL	Sasol Limited	Major Integrated Oil & Gas
+LOXO	Loxo Oncology, Inc.	Biotechnology
+NDRM	NeuroDerm Ltd.	Biotechnology
+MDWD	MediWound Ltd.	Biotechnology
+PLI.TO	ProMetic Life Sciences Inc.	Biotechnology
+IMO.TO	Imperial Oil Limited	Major Integrated Oil & Gas
+CAIRN.NS	Cairn India Limited	Major Integrated Oil & Gas
+WOF.AX	Wolf Petroleum Limited	Major Integrated Oil & Gas
+SRX.AX	Sirtex Medical Limited	Biotechnology
+MNOV	MediciNova, Inc.	Biotechnology
+MGNX	MacroGenics, Inc.	Biotechnology
+MRNS	Marinus Pharmaceuticals, Inc.	Biotechnology
+MSB.AX	Mesoblast Limited	Biotechnology
+MIR.V	MedMira Inc.	Biotechnology
+MFS.V	Medifocus Inc.	Biotechnology
+NKTR	Nektar Therapeutics	Biotechnology
+QURE	uniQure N.V.	Biotechnology
+PRQR	ProQR Therapeutics N.V.	Biotechnology
+NSTG	NanoString Technologies, Inc.	Biotechnology
+NEOT	Neothetics, Inc.	Biotechnology
+NPHC	Nutra Pharma Corp.	Biotechnology
+BU.TO	Burcon Nutrascience Corporation	Biotechnology
+ILNS	Intellect Neurosciences, Inc.	Biotechnology
+TIG.BR	TiGenix NV	Biotechnology
+THR.BR	ThromboGenics NV	Biotechnology
+NOVA.DE	Novo Nordisk A/S	Biotechnology
+NMUS	Nemus Bioscience, Inc.	Biotechnology
+NEU.MC	Neuron Bio, S.A.	Biotechnology
+NEU.AX	Neuren Pharmaceuticals Limited	Biotechnology
+OPXA	Opexa Therapeutics, Inc.	Biotechnology
+ORMP	Oramed Pharmaceuticals Inc.	Biotechnology
+OMED	OncoMed Pharmaceuticals, Inc.	Biotechnology
+OTIC	Otonomy, Inc.	Biotechnology
+OGEN	Oragenics, Inc.	Biotechnology
+OPLI	OphthaliX Inc.	Biotechnology
+ONC.TO	Oncolytics Biotech Inc.	Biotechnology
+OCC.AX	Orthocell Limited	Biotechnology
+OSXB3.SA	OSX Brasil S.A.	Major Integrated Oil & Gas
+COT.V	Critical Outcome Technologies Inc.	Biotechnology
+ALONC.PA	Oncodesign Société Anonyme	Biotechnology
+XENE	Xenon Pharmaceuticals Inc.	Biotechnology
+REPH	Recro Pharma, Inc.	Biotechnology
+PIRS	Pieris Pharmaceuticals, Inc.	Biotechnology
+TTNP	Titan Pharmaceuticals, Inc.	Biotechnology
+RTTR	Ritter Pharmaceuticals, Inc.	Biotechnology
+ZSAN	Zosano Pharma Corporation	Biotechnology
+CATB	Catabasis Pharmaceuticals, Inc.	Biotechnology
+PULM	Pulmatrix, Inc.	Biotechnology
+TCON	TRACON Pharmaceuticals, Inc.	Biotechnology
+PTEO	Proteo, Inc.	Biotechnology
+PRTO	Proteon Therapeutics, Inc.	Biotechnology
+PFNX	Pfenex Inc.	Biotechnology
+PARD	Poniard Pharmaceuticals, Inc.	Biotechnology
+ICPTF	IC Potash Corp.	Biotechnology
+BSU.DE	BP p.l.c.	Major Integrated Oil & Gas
+QMDT	Quick-Med Technologies Inc.	Biotechnology
+QPT.V	Quest PharmaTech Inc.	Biotechnology
+QFI.L	Quadrise Fuels International PLC	Major Integrated Oil & Gas
+RXDX	Ignyta, Inc.	Biotechnology
+RCAR	RenovaCare, Inc.	Biotechnology
+RGIN	Regenicin, Inc.	Biotechnology
+RVX.TO	Resverlogix Corp.	Biotechnology
+RRL.V	Relentless Resources Ltd	Major Integrated Oil & Gas
+TOT	TOTAL S.A.	Major Integrated Oil & Gas
+YPF	YPF Sociedad Anonima	Major Integrated Oil & Gas
+STML	Stemline Therapeutics, Inc.	Biotechnology
+SNGX	Soligenix, Inc.	Biotechnology
+ISCO	International Stem Cell Corporation	Biotechnology
+SVON	Sevion Therapeutics, Inc.	Biotechnology
+TSRO	Tesaro, Inc.	Biotechnology
+TENX	Tenax Therapeutics, Inc.	Biotechnology
+VTL	Vital Therapies, Inc.	Biotechnology
+VKTX	Viking Therapeutics, Inc.	Biotechnology
+TRVN	Trevena, Inc.	Biotechnology
+TH.TO	Theratechnologies Inc.	Biotechnology
+CAPS	Capstone Therapeutics Corp.	Biotechnology
+TPIV	TapImmune, Inc.	Biotechnology
+TOTN.MX	TOTAL S.A.	Major Integrated Oil & Gas
+IDP.DU	BIOGEN INC. DL -,0005	Biotechnology
+GIS.DE	Gilead Sciences, Inc.	Biotechnology
+GILD.MX	Gilead Sciences, Inc.	Biotechnology
+CHV.F	Chevron Corporation	Major Integrated Oil & Gas
+CHV.DE	Chevron Corporation	Major Integrated Oil & Gas
+CG3.DE	Celgene Corporation	Biotechnology
+VX1.MU	VERTEX PHARMAC. DL-,01	Biotechnology
+REPA.F	Repsol, S.A.	Major Integrated Oil & Gas
+REPA.DE	Repsol, S.A.	Major Integrated Oil & Gas
+PBRN.MX	Petróleo Brasileiro S.A. - Petrobras	Major Integrated Oil & Gas
+IDP.DE	Biogen Inc.	Biotechnology
+GIS.BE	GILEAD SCIENCES DL-,001	Biotechnology
+GAZ.F	Public Joint Stock Company Gazprom	Major Integrated Oil & Gas
+GAZ.DU	GAZPROM ADR SP./2 RL 5L 5	Major Integrated Oil & Gas
+GAZ.BE	GAZPROM ADR SP./2 RL 5L 5	Major Integrated Oil & Gas
+ENI1.BE	ENI S.P.A. ADR/2 EO 1	Major Integrated Oil & Gas
+EN.MX	Eni S.p.A.	Major Integrated Oil & Gas
+DNQA.DE	Statoil ASA	Major Integrated Oil & Gas
+DDRT	DanDrit Biotech USA, Inc.	Biotechnology
+CVX.MX	Chevron Corporation	Major Integrated Oil & Gas
+CTIC.MI	CTI BioPharma Corp.	Biotechnology
+CHV.DU	CHEVRON CORP. DL-,75	Major Integrated Oil & Gas
+CG3.MU	CELGENE CORP. DL-,01	Biotechnology
+CG3.BE	CELGENE CORP. DL-,01	Biotechnology
+AMGN.MX	Amgen Inc.	Biotechnology
+VCYT	Veracyte, Inc.	Biotechnology
+VBIV	VBI Vaccines Inc.	Biotechnology
+VITR.ST	Vitrolife AB (publ)	Biotechnology
+VRP.L	Verona Pharma plc	Biotechnology
+VAL.L	ValiRx plc	Biotechnology
+VSC.SG	4SC AG Inhaber-Aktien o.N.	Biotechnology
+BIO3.F	Biotest Aktiengesellschaft	Biotechnology
+V3V.BE	VITA 34 AG NA O.N.	Biotechnology
+WL6.F	Wilex AG	Biotechnology
+WL6.DU	WILEX AG O.N.	Biotechnology
+XNCR	Xencor, Inc.	Biotechnology
+CHVX34.SA	Chevron Corporation	Major Integrated Oil & Gas
+XONA.F	Exxon Mobil Corporation	Major Integrated Oil & Gas
+XOM.BA	Exxon Mobil Corporation	Major Integrated Oil & Gas
+XONA.MU	EXXON MOBIL CORP.	Major Integrated Oil & Gas
+XONA.SG	EXXON MOBIL CORP. Registered Sh	Major Integrated Oil & Gas
+XONA.HA	EXXON MOBIL CORP.	Major Integrated Oil & Gas
+XONA.BE	EXXON MOBIL CORP.	Major Integrated Oil & Gas
+YPFD.BA	YPF Sociedad Anonima	Major Integrated Oil & Gas
+YPFN.MX	YPF Sociedad Anonima	Major Integrated Oil & Gas
+ZEAL.CO	Zealand Pharma A/S	Biotechnology
+PROB.ST	Probi AB (publ)	Biotechnology
+ACTI.ST	Active Biotech AB	Biotechnology
+HMED.ST	Hansa Medical AB (publ)	Biotechnology
+GENO.ST	Genovis AB (publ)	Biotechnology
+BINV.ST	BioInvent International AB	Biotechnology
+MVIR-B.ST	Medivir AB (publ)	Biotechnology
+ABZA.L	Abzena plc	Biotechnology
+ABT.OL	Aqua Bio Technology ASA	Biotechnology
+ABB.MC	AB-Biotics, S.A.	Biotechnology
+CLVSF	CellaVision AB (publ)	Biotechnology
+ACW.AX	Actinogen Medical Limited	Biotechnology
+ACL.AX	Alchemia Limited	Biotechnology
+ACT.BE	ACTELION LTD SF 0,50	Biotechnology
+ACT.DE	Actelion Ltd	Biotechnology
+ACT.SG	ACTELION LTD. Nam.-Aktien SF 0,	Biotechnology
+ACT.F	Actelion Ltd	Biotechnology
+ACT.DU	ACTELION LTD SF 0,50	Biotechnology
+ACT.MU	ACTELION LTD SF 0,50	Biotechnology
+APC.V	Advanced Proteome Therapeutics Corporation	Biotechnology
+APE.DE	Addex Therapeutics Ltd	Biotechnology
+AHZ.AX	Admedus Limited	Biotechnology
+GAZ.MU	GAZPROM ADR SP./2 RL 5L 5	Major Integrated Oil & Gas
+RHO6.BE	ROCHE HLDG SP.ADR 1/8	Biotechnology
+SHPGN.MX	Shire plc	Biotechnology
+RHO6.SG	RHO6.SG	Biotechnology
+R6C2.F	Royal Dutch Shell plc	Major Integrated Oil & Gas
+R6C1.SG	Royal Dutch Shell Reg.Sh.A (Spo	Major Integrated Oil & Gas
+DNQA.MU	STATOIL ASA ADR/1 NK 2,50	Major Integrated Oil & Gas
+TOTA.DE	TOTAL S.A.	Major Integrated Oil & Gas
+TOTA.BE	TOTAL S.A. SPONS. ADR 1	Major Integrated Oil & Gas
+STON.MX	Statoil ASA	Major Integrated Oil & Gas
+BSU.BE	BP PLC ADR/6 DL -,25	Major Integrated Oil & Gas
+REPA.BE	REPSOL S.A. EO 1 ADR 1	Major Integrated Oil & Gas
+NOVA.SG	NOVO-NORDISK AS Indeh.Akt.B (Sp	Biotechnology
+ADOC.PA	Adocia SA	Biotechnology
+TOTA.SG	Total S.A. Act.Port.(Spons.ADRs	Major Integrated Oil & Gas
+BSU.MU	BP PLC ADR/6 DL -,25	Major Integrated Oil & Gas
+R6C1.MU	ROYAL DUTCH SHELL A ADR/2	Major Integrated Oil & Gas
+TOTA.MU	TOTAL S.A. SPONS. ADR 1	Major Integrated Oil & Gas
+GAZ.SG	Gazprom PJSC Nam.Akt.(Sp.ADRs)/	Major Integrated Oil & Gas
+REPA.SG	Repsol, S.A.	Major Integrated Oil & Gas
+ADJ.SI	OLS Enterprise Ltd.	Biotechnology
+DNQA.SG	Statoil ASA Navne-Aks. (Sp.ADRs	Major Integrated Oil & Gas
+PBRAN.MX	Petróleo Brasileiro S.A. - Petrobras	Major Integrated Oil & Gas
+BSU.F	BP PLC ADR/6 DL -,25	Major Integrated Oil & Gas
+NOVA.BE	NOVO-NORDISK B ADR/1DK 10	Biotechnology
+R6C1.F	Royal Dutch Shell plc	Major Integrated Oil & Gas
+SNPN.MX	China Petroleum & Chemical Corporation	Major Integrated Oil & Gas
+GAZ.DE	Public Joint Stock Company Gazprom	Major Integrated Oil & Gas
+SSLN.MX	Sasol Limited	Major Integrated Oil & Gas
+RHO6.F	Roche Holding AG	Biotechnology
+FYB.DE	Formycon AG	Biotechnology
+VSC.DE	4SC AG	Biotechnology
+RHO6.DE	Roche Holding AG	Biotechnology
+B8F.DE	Biofrontera AG	Biotechnology
+WL6.DE	Wilex AG	Biotechnology
+MDG1.DE	MediGene AG	Biotechnology
+S3F.DE	Santhera Pharmaceuticals Holding AG	Biotechnology
+AJAC	Aja Cannafacturing, Inc.	Biotechnology
+ALNEV.PA	Neovacs S.A.	Biotechnology
+ALINT.PA	IntegraGen SA	Biotechnology
+DUL.F	Alnylam Pharmaceuticals, Inc.	Biotechnology
+ALHYG.PA	Hybrigenics Société Anonyme	Biotechnology
+DUL.SG	Alnylam Pharmaceuticals Inc Reg	Biotechnology
+ALNOV.PA	Novacyt Société Anonyme	Biotechnology
+DUL.MU	ALNYLAM PHARMACE.DL-,0001	Biotechnology
+AMGN34.SA	Amgen Inc.	Biotechnology
+ANTB	AntriaBio, Inc.	Biotechnology
+ATE.V	Antibe Therapeutics Inc.	Biotechnology
+FALG.PA	Fermentalg Société Anonyme	Biotechnology
+ANR.AX	Anatara Lifesciences Ltd	Biotechnology
+AOR.L	AorTech International plc	Biotechnology
+KMP-UN.TO	Killam Apartment Real Estate Investment Trust	Biotechnology
+APE.BE	ADDEX THERAPEUTICS SF 1	Biotechnology
+PESA.BA	Petrobras Argentina S.A.	Major Integrated Oil & Gas
+CVX.BA	Chevron Corporation	Major Integrated Oil & Gas
+ARGX.BR	argenx SE	Biotechnology
+NANO.OL	Nordic Nanovector ASA	Biotechnology
+BIOTEC.OL	Biotec Pharmacon ASA	Biotechnology
+PCIB.OL	PCI Biotech Holding ASA	Biotechnology
+HBC.OL	Hofseth BioCare ASA	Biotechnology
+PRR.AX	Prima Biomed Ltd.	Biotechnology
+POH.AX	Phosphagenics Limited	Biotechnology
+CYP.AX	Cynata Therapeutics Limited	Biotechnology
+CUV.AX	Clinuvel Pharmaceuticals Limited	Biotechnology
+BNO.AX	Bionomics Limited	Biotechnology
+PV3.DE	pSivida Corp.	Biotechnology
+PV3.BE	PSIVIDA CORP.CDIS/1DL-,01	Biotechnology
+PBT.AX	Prana Biotechnology Limited	Biotechnology
+MVF.AX	Monash IVF Group Limited	Biotechnology
+MDC.AX	Medlab Clinical Limited	Biotechnology
+PIQ.AX	Proteomics International Laboratories Ltd	Biotechnology
+PV3.DU	PSIVIDA CORP.CDIS/1DL-,01	Biotechnology
+IMC.AX	Immuron Limited	Biotechnology
+MEB.AX	Medibio Limited	Biotechnology
+AVANCE.OL	Avance Gas Holding Limited	Major Integrated Oil & Gas
+CHP-UN.TO	Choice Properties Real Estate Investment Trust	Biotechnology
+BCT.V	BriaCell Therapeutics Corp.	Biotechnology
+COV.V	Covalon Technologies Ltd.	Biotechnology
+SSS.V	Sunvest Minerals Corp.	Biotechnology
+GLPG.AS	Galapagos NV	Biotechnology
+MDXH.BR	MDxHealth SA	Biotechnology
+CYX.V	Calyx Bio-Ventures Inc.	Biotechnology
+SBM.V	Sirona Biochem Corp.	Biotechnology
+HBP.TO	Helix Biopharma Corp.	Biotechnology
+CELESTIAL.NS	Celestial Biolabs Limited	Biotechnology
+CBBT	Cerebain Biotech Corp.	Biotechnology
+BIO.MU	BIOTEST AG ST O.N.	Biotechnology
+B8F.BE	BIOFRONTERA AG NA O.N.	Biotechnology
+IDP.BE	BIOGEN INC. DL -,0005	Biotechnology
+BIT.AX	Biotron Limited	Biotechnology
+IDP.MU	BIOGEN INC. DL -,0005	Biotechnology
+BIO.HA	BIOTEST AG ST O.N.	Biotechnology
+BIO.DU	BIOTEST AG ST O.N.	Biotechnology
+BIIB.MX	Biogen Inc.	Biotechnology
+BIO.BE	BIOTEST AG ST O.N.	Biotechnology
+BIO3.DU	BIOTEST AG VZ O.N.	Biotechnology
+IDP.F	Biogen Inc.	Biotechnology
+PAR.AX	Paradigm Biopharmaceuticals Limited	Biotechnology
+B8F.DU	BIOFRONTERA AG NA O.N.	Biotechnology
+BIO3.MU	BIOTEST AG VZ O.N.	Biotechnology
+IDP.SG	Biogen Inc. Registered Shares D	Biotechnology
+IDP.HA	BIOGEN INC. DL -,0005	Biotechnology
+STERLINBIO.NS	Sterling Biotech Limited	Biotechnology
+BIO3.HA	BIOTEST AG VZ O.N.	Biotechnology
+BIOPOR.CO	BioPorto A/S	Biotechnology
+BIO.DE	Biotest Aktiengesellschaft	Biotechnology
+B8F.SG	Biofrontera AG Namens-Aktien o.	Biotechnology
+GBI.AX	Genera Biosystems Limited	Biotechnology
+KNE.V	Kane Biotech Inc.	Biotechnology
+BIO.SG	BIOTEST AG STAMMAKTIEN O.N.	Biotechnology
+BIO3.BE	BIOTEST AG VZ O.N.	Biotechnology
+PANACEABIO.NS	Panacea Biotec Limited	Biotechnology
+BXN.AX	Bioxyne Limited	Biotechnology
+BIO3.SG	BIOTEST AG VORZUGSAKTIEN O.ST.	Biotechnology
+B8F.F	Biofrontera AG	Biotechnology
+BTI.V	biOasis Technologies Inc.	Biotechnology
+B8F.MU	BIOFRONTERA AG NA O.N.	Biotechnology
+BIO.F	Biotest Aktiengesellschaft	Biotechnology
+OXB.L	Oxford BioMedica PLC	Biotechnology
+BLT.NZ	BLIS Technologies Limited	Biotechnology
+0673.HK	CHINA HEALTH	Biotechnology
+BPE5.DU	BP PLC DL-,25	Major Integrated Oil & Gas
+BPE5.DE	BP p.l.c.	Major Integrated Oil & Gas
+BPH.AX	BPH Energy Limited	Biotechnology
+BPE5.HA	BP PLC DL-,25	Major Integrated Oil & Gas
+BPE5.MU	BP PLC DL-,25	Major Integrated Oil & Gas
+BSU.SG	BP p.l.c.	Major Integrated Oil & Gas
+BPE5.F	BP p.l.c.	Major Integrated Oil & Gas
+BPN.MX	BP p.l.c.	Major Integrated Oil & Gas
+BPE5.BE	BP PLC DL-,25	Major Integrated Oil & Gas
+BPE5.SG	BP PLC Registered Shares DL -,2	Major Integrated Oil & Gas
+PETR3.SA	Petróleo Brasileiro S.A. - Petrobras	Major Integrated Oil & Gas
+BSTG	Biostage, Inc.	Biotechnology
+MJN.V	Cronos Group Inc.	Biotechnology
+LKOD.L	PJSC LUKOIL	Major Integrated Oil & Gas
+CDXI	Cardax, Inc.	Biotechnology
+CCAN	Canadian Cannabis Corp.	Biotechnology
+PV3.SG	pSivida Corp. R.S.(Ch.Dp.Int./C	Biotechnology
+PV3.F	pSivida Corp.	Biotechnology
+CDY.AX	Cellmid Limited	Biotechnology
+CZO.V	Ceapro Inc.	Biotechnology
+CLCS	Cell Source, Inc.	Biotechnology
+CELG.MX	Celgene Corporation	Biotechnology
+CE2.F	CropEnergies AG	Major Integrated Oil & Gas
+CG3.F	Celgene Corporation	Biotechnology
+CE2.MU	CROPENERGIES AG	Major Integrated Oil & Gas
+CE2.BE	CROPENERGIES AG	Major Integrated Oil & Gas
+CG3.SG	CELGENE CORP. Registered Shares	Biotechnology
+CLGN34.SA	Celgene Corporation	Biotechnology
+CG3.DU	CELGENE CORP. DL-,01	Biotechnology
+CE2.SG	CropEnergies AG Inhaber-Aktien	Major Integrated Oil & Gas
+CE2.DU	CROPENERGIES AG	Major Integrated Oil & Gas
+CFRX	ContraFect Corporation	Biotechnology
+S3F.MU	SANTHERA PHARM.HD.NA SF 1	Biotechnology
+S3F.SG	Santhera Pharmaceuticals Hold.N	Biotechnology
+RHO5.MU	ROCHE HLDG AG GEN.	Biotechnology
+IXI.L	IXICO Plc	Biotechnology
+0386.HK	SINOPEC CORP	Major Integrated Oil & Gas
+0857.HK	PETROCHINA	Major Integrated Oil & Gas
+PC6.DE	PetroChina Company Limited	Major Integrated Oil & Gas
+8247.HK	BIOSINO BIO-TEC	Biotechnology
+8189.HK	TEDA BIOMEDICAL	Biotechnology
+PC6.MU	PETROCHINA CO. LTD H YC 1	Major Integrated Oil & Gas
+PC6.F	PetroChina Company Limited	Major Integrated Oil & Gas
+PC6.DU	PETROCHINA CO. LTD H YC 1	Major Integrated Oil & Gas
+PC6.SG	PetroChina Co. Ltd. Registered	Major Integrated Oil & Gas
+ICCC	ImmuCell Corporation	Biotechnology
+CTI.V	CaiTerra International Energy Corporation	Major Integrated Oil & Gas
+CUR.DE	Curasan AG	Biotechnology
+CUR.DU	CURASAN AG	Biotechnology
+CUR.MU	CURASAN AG	Biotechnology
+CUR.BE	CURASAN AG	Biotechnology
+CUR.SG	CURASAN AG Inhaber-Aktien o.N.	Biotechnology
+CUR.F	Curasan AG	Biotechnology
+ECX.MU	EPIGENOMICS AG NA O.N.	Biotechnology
+MDG1.F	MediGene AG	Biotechnology
+PA8.DE	Paion AG	Biotechnology
+MDG1.DU	MEDIGENE AG NA O.N.	Biotechnology
+WL6.SG	Wilex AG Inhaber-Aktien o.N.	Biotechnology
+WL6.MU	WILEX AG O.N.	Biotechnology
+VSC.DU	4SC AG	Biotechnology
+DMA.V	DiaMedica Therapeutics Inc.	Biotechnology
+DXB.AX	Dimerix Limited	Biotechnology
+DISHMAN.NS	Dishman Pharmaceuticals and Chemicals Limited	Biotechnology
+BAVA.CO	Bavarian Nordic A/S	Biotechnology
+NEUR.CO	Neurosearch A/S	Biotechnology
+DNQA.BE	STATOIL ASA ADR/1 NK 2,50	Major Integrated Oil & Gas
+DNQA.F	Statoil ASA	Major Integrated Oil & Gas
+RHO5.SG	RHO5.SG	Biotechnology
+RHO5.DU	ROCHE HLDG AG GEN.	Biotechnology
+RHO5.F	Roche Holding AG	Biotechnology
+R6C3.DU	ROYAL DUTCH SHELL B EO-07	Major Integrated Oil & Gas
+R6C3.HA	ROYAL DUTCH SHELL B EO-07	Major Integrated Oil & Gas
+R6C.SG	Royal Dutch Shell Reg. Shares C	Major Integrated Oil & Gas
+R6C3.BE	ROYAL DUTCH SHELL B EO-07	Major Integrated Oil & Gas
+R6C.BE	ROYAL DUTCH SHELL A EO-07	Major Integrated Oil & Gas
+R6C.HA	ROYAL DUTCH SHELL A EO-07	Major Integrated Oil & Gas
+R6C.MU	ROYAL DUTCH SHELL A EO-07	Major Integrated Oil & Gas
+R6C.DU	ROYAL DUTCH SHELL A EO-07	Major Integrated Oil & Gas
+R6C3.MU	ROYAL DUTCH SHELL B EO-07	Major Integrated Oil & Gas
+R6C2.DE	Royal Dutch Shell plc	Major Integrated Oil & Gas
+R6C.F	Royal Dutch Shell plc	Major Integrated Oil & Gas
+ECX.F	Epigenomics AG	Biotechnology
+ECX.SG	Epigenomics AG Namens-Aktien o.	Biotechnology
+ECX.BE	EPIGENOMICS AG NA O.N.	Biotechnology
+ECX.DU	EPIGENOMICS AG NA O.N.	Biotechnology
+ECX.DE	Epigenomics AG	Biotechnology
+ENI.AS	Eni S.p.A.	Major Integrated Oil & Gas
+ENI.MU	ENI S.P.A.	Major Integrated Oil & Gas
+ENI.DU	ENI S.P.A.	Major Integrated Oil & Gas
+ROVI.MC	Laboratorios Farmaceuticos ROVI, S.A.	Biotechnology
+GRF.MC	Grifols, S.A.	Biotechnology
+REP.BA	Repsol, S.A.	Major Integrated Oil & Gas
+GRFPN.MX	Grifols, S.A.	Biotechnology
+MOLD.L	MOL Magyar Olaj- es Gazipari Nyilvanosan Mukodo Reszvenytarsasag	Major Integrated Oil & Gas
+REPSN.MX	Repsol, S.A.	Major Integrated Oil & Gas
+ETX.L	e-Therapeutics plc	Biotechnology
+EX9.MU	EXELIXIS INC. DL-,01	Biotechnology
+EX9.F	Exelixis, Inc.	Biotechnology
+EX9.SG	EXELIXIS INC. Registered Shares	Biotechnology
+EX9.BE	EXELIXIS INC. DL-,01	Biotechnology
+EX9.DU	EXELIXIS INC. DL-,01	Biotechnology
+FGEN.MX	FibroGen, Inc.	Biotechnology
+FYB.BE	FORMYCON AG	Biotechnology
+FYB.F	Formycon AG	Biotechnology
+TOTB.MU	TOTAL S.A. EO 2,50	Major Integrated Oil & Gas
+TXCL.PA	TxCell S.A.	Biotechnology
+TOTB.SG	Total S.A. Actions au Porteur E	Major Integrated Oil & Gas
+GALPN.MX	Galp Energia, SGPS, S.A.	Major Integrated Oil & Gas
+ONGC.NS	Oil and Natural Gas Corporation Limited	Major Integrated Oil & Gas
+SNG.L	Synairgen plc	Biotechnology
+RENE.L	ReNeuron Group plc	Biotechnology
+SLN.L	Silence Therapeutics plc	Biotechnology
+GXR.V	Georox Resources Inc.	Major Integrated Oil & Gas
+GIS.DU	GILEAD SCIENCES DL-,001	Biotechnology
+GIS.F	Gilead Sciences, Inc.	Biotechnology
+GIS.HA	GILEAD SCIENCES DL-,001	Biotechnology
+GIS.SG	GILEAD SCIENCES INC. Registered	Biotechnology
+GIS.MU	GILEAD SCIENCES DL-,001	Biotechnology
+HCT.AX	Holista CollTech Limited	Biotechnology
+RHS.AX	RHS Limited	Biotechnology
+IBT.V	IBEX Technologies Inc.	Biotechnology
+ICO.V	iCo Therapeutics Inc.	Biotechnology
+IIL.AX	Innate Immunotherapeutics Limited	Biotechnology
+IMCL	ImmunoClin Corporation	Biotechnology
+IMM.L	ImmuPharma plc	Biotechnology
+IOT.V	Innovotech Inc.	Biotechnology
+MLM.MI	MolMed S.p.A.	Biotechnology
+ENI.F	Eni S.p.A.	Major Integrated Oil & Gas
+ENI.DE	Eni S.p.A.	Major Integrated Oil & Gas
+ENI.SG	ENI S.P.A. Azioni nom. o.N.	Major Integrated Oil & Gas
+ENI.BE	ENI S.P.A.	Major Integrated Oil & Gas
+ENI.HA	ENI S.P.A.	Major Integrated Oil & Gas
+IVQ.AX	Invitrocue Limited	Biotechnology
+S7E.BE	SHIRE PLC LS-,05	Biotechnology
+S7E.F	Shire plc	Biotechnology
+S7E.SG	Shire PLC Registered Shares LS	Biotechnology
+SGGD.L	"Surgutneftegas" Open Joint Stock Company	Major Integrated Oil & Gas
+1178.HK	SHARE ECON GP	Biotechnology
+1177.HK	SINO BIOPHARM	Biotechnology
+LYKALABS.NS	Lyka Labs Limited	Biotechnology
+MDG1.MU	MEDIGENE AG NA O.N.	Biotechnology
+MDG1.HA	MEDIGENE AG NA O.N.	Biotechnology
+MDG1.SG	Medigene AG Namens-Aktien o.N.	Biotechnology
+MDG1.BE	MEDIGENE AG NA O.N.	Biotechnology
+MPH.V	Medicure Inc.	Biotechnology
+MGN.F	Mologen AG	Biotechnology
+MGN.DE	Mologen AG	Biotechnology
+MGN.SG	Mologen AG Inhaber-Aktien o.N.	Biotechnology
+MGN.MU	MOLOGEN AG	Biotechnology
+MGN.DU	MOLOGEN AG	Biotechnology
+MOR.DU	MORPHOSYS AG O.N.	Biotechnology
+MOR.F	Morphosys AG	Biotechnology
+MOR.SG	MORPHOSYS AG Inhaber-Aktien o.N	Biotechnology
+MOR.BE	MORPHOSYS AG O.N.	Biotechnology
+MOR.HA	MORPHOSYS AG O.N.	Biotechnology
+0QCO.L	Pharming Group N.V.	Biotechnology
+NOVA.F	Novo Nordisk A/S	Biotechnology
+NVON.MX	Novo Nordisk A/S	Biotechnology
+OMMH	Omnimmune Holdings, Inc.	Biotechnology
+PA8.DU	PAION O.N	Biotechnology
+PA8.MU	PAION O.N	Biotechnology
+PA8.BE	PAION O.N	Biotechnology
+PAB.AX	Patrys Limited	Biotechnology
+PA8.SG	PAION AG Inhaber-Aktien o.N.	Biotechnology
+PC6.BE	PETROCHINA CO. LTD H YC 1	Major Integrated Oil & Gas
+SNP.L	China Petroleum & Chemical Corporation	Major Integrated Oil & Gas
+PTRN.MX	PetroChina Company Limited	Major Integrated Oil & Gas
+VX1.HA	VERTEX PHARMAC. DL-,01	Biotechnology
+REGN.MX	Regeneron Pharmaceuticals, Inc.	Biotechnology
+VX1.BE	VERTEX PHARMAC. DL-,01	Biotechnology
+S3F.F	Santhera Pharmaceuticals Holding AG	Biotechnology
+VRTX.MX	Vertex Pharmaceuticals Incorporated	Biotechnology
+VX1.F	Vertex Pharmaceuticals Incorporated	Biotechnology
+VX1.DU	VERTEX PHARMAC. DL-,01	Biotechnology
+S3F.BE	SANTHERA PHARM.HD.NA SF 1	Biotechnology
+VX1.SG	VERTEX PHARMACEUTICALS INC. Reg	Biotechnology
+SCLP.L	Scancell Holdings PLC	Biotechnology
+PNV.AX	Polynovo Limited	Biotechnology
+PVA.AX	pSivida Corp.	Biotechnology
+PTX.AX	Prescient Therapeutics Limited	Biotechnology
+RGS.AX	Regeneus Ltd	Biotechnology
+RNO.AX	Rhinomed Limited	Biotechnology
+SEQUENT.NS	Sequent Scientific Limited	Biotechnology
+SIGA	SIGA Technologies, Inc.	Biotechnology
+TOTB.F	TOTAL S.A.	Major Integrated Oil & Gas
+TOTB.DU	TOTAL S.A. EO 2,50	Major Integrated Oil & Gas
+TOTB.BE	TOTAL S.A. EO 2,50	Major Integrated Oil & Gas
+TOTB.HA	TOTAL S.A. EO 2,50	Major Integrated Oil & Gas
+TOTA.F	TOTAL S.A.	Major Integrated Oil & Gas
+4133.TW	Abnova (Taiwan) Corporation	Biotechnology
+1734.TW	Sinphar Pharmaceutical Co., Ltd.	Biotechnology
+1720.TW	Standard Chemical & Pharmaceutical Co. Ltd.	Biotechnology
+1701.TW	China Chemical & Pharmaceutical Co., Ltd.	Biotechnology
+3164.TW	GenMont Biotech Incorporation	Biotechnology
+1733.TW	Apex Biotechnology Corp.	Biotechnology
+V3V.SG	Vita 34 AG Namens-Aktien o.N.	Biotechnology
+V3V.F	VITA 34 AG	Biotechnology
+VLA.AX	Viralytics Limited	Biotechnology
+VPI.V	Vitality Products Inc.	Biotechnology
+VSC.BE	4SC AG	Biotechnology
+VSC.F	4SC AG	Biotechnology
+VSC.MU	4SC AG	Biotechnology
+WL6.BE	WILEX AG O.N.	Biotechnology
+ENI1.SG	ENI S.P.A. Az. nom. (Spons.ADRs	Major Integrated Oil & Gas
+ENI1.F	Eni S.p.A.	Major Integrated Oil & Gas
+CHV.HA	CHEVRON CORP. DL-,75	Major Integrated Oil & Gas
+CHV.MU	CHEVRON CORP. DL-,75	Major Integrated Oil & Gas
+CHV.SG	Chevron Corp. Registered Shares	Major Integrated Oil & Gas
+CHV.BE	CHEVRON CORP. DL-,75	Major Integrated Oil & Gas
+COS.L	Collagen Solutions PLC	Biotechnology
