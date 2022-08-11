@@ -44,7 +44,7 @@
     },
     {
         "Question_number": 9,
-        "Question": "Which of the following industry are you most interested in? Select 3 only.",
+        "Question": "Which of the following industry are you most interested in? Select 1 only.",
         "Choices": [["Oil and Gas",1], ["Biotechnology",1],["Food",1], ["Technology",1],["Aerospace and Defence",1]]
     }    
 ]
