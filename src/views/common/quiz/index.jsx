@@ -52,17 +52,19 @@ export default function UserReports() {
     const submitQuiz = () =>{
         console.log("now sending to BE")
         console.log(qnAnswer)
-        fetch('http://localhost:5004/', {
+        fetch('http://localhost:5004/calculateEsgScore', {
+            // mode: 'no-cors',
             method: 'POST',
             headers:{
                 'Content-Type': 'application/json'
             },
-            body:JSON.stringify({
+            body:JSON.stringify(
                qnAnswer
-            })
+            
+            )
         }).then(res=>res.json())
         .then(data =>{
-            console.log("failed")
+            console.log(data)
         })
 
     }
