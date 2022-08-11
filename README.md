@@ -1,3 +1,11 @@
+### InvESG by Team S.H.I.E.L.D.
+
+MEMBERS:
+Joel Seah Shang Hong
+Lee Shun Hui
+Leo Chong Rui, Brayden
+Rohan Manoj Kuruvilla
+Varunesh Balamuniappan
 ### Getting started
 You need to have certain tools and packages installed in order to run the application.
 
@@ -5,7 +13,6 @@ Following the steps below from the prerequisites till the end of the installatio
 
 ### Prerequisites
 - Python 3.9 or later (https://www.python.org/downloads/)
-- Node.js (https://nodejs.org/en/download/)
 - WampServer (https://www.wampserver.com/en/)
 - Visual Studio Code (https://code.visualstudio.com/download)
 
@@ -30,3 +37,7 @@ Running the application locally
 4. Within the terminal, navigate to backend/microservice or backend/complexmicroservice folder , then type python <any file name>.py to start the backend server.
 5. Now navigate to the shield_citi folder in the terminal, then type "npm start" to start the Node.js server which will host your frontend.
 6. If you have problem starting up the Node.js server. Type "npm install" in the terminal and try again. Make sure you are in the shield_citi folder
+
+### PRESENTATION DECK URL
+
+URL : https://docs.google.com/presentation/d/1WludffvHD6FrPv-gDMTzEUPI0Leb1-Xoo64Q7q5WXD8/edit?usp=sharing
