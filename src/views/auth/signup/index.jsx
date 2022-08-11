@@ -22,10 +22,8 @@ import {
     Radio
 } from "@chakra-ui/react";
 // Custom components
-import { HSeparator } from "components/separator/Separator";
 import DefaultAuth from "layouts/auth/Default";
 import illustration from "assets/img/auth/auth.png";
-import { FcGoogle } from "react-icons/fc";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { RiEyeCloseLine } from "react-icons/ri";
 
@@ -52,7 +50,7 @@ function SignUp() {
         </Alert>
     }
     localStorage.setItem('role', 'newUser');
-    localStorage.setItem('id', 99);
+    localStorage.setItem('id', 3);
     const [show, setShow] = React.useState(false);
     const [SignIn, setSignIn] = useState({
         "email": "",

@@ -33,15 +33,26 @@ export default function Recommendation() {
     const [industry, setIndustry] = React.useState("");
     const [allData, setAllData] = React.useState([]);
 
+        console.log(localStorage.getItem("id"))
+
     useEffect(() => {
-        fetch("/db/industry_output.json")
+        fetch("http://localhost:5198/recommendations",  {
+            // mode: 'no-cors',
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify(
+                {cid: `${localStorage.getItem("id")}`}
+            )
+        })
             .then(res => res.json())
             .then((data) => {
-                setAllData(data)
-                setDataList(data.sort((a, b) => b.profileScore < a.profileScore ? 1 : -1))
+                console.log(data.data.equity)
+                setAllData(data.data.equity)
+                setDataList(data.data.equity.sort((a, b) => b.profileScore < a.profileScore ? 1 : -1))
             })
     }, [])
-
 
 
     const changeSwitch = (e) => {
@@ -75,7 +86,7 @@ export default function Recommendation() {
 
                     <Spacer />
                     <Select onChange={(e) => changeIndustry(e)} variant='filled' placeholder='Filter by industry' w='200px' >
-                        <option value='Biotechnology'>Biotechnology</option>
+                        <option value='BioTechnology'>BioTechnology</option>
                         <option value='OilAndGas'>Oil and Gas</option>
                         <option value='Technology'>Technology</option>
                         <option value='AerospaceAndDefence'>Aerospace and defence</option>

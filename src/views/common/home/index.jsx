@@ -56,7 +56,7 @@ export default function UserReports() {
                         <Flex
                             direction={rowDirection}
                             justifyContent='space-between'>
-                            <Flex direction='column' >
+                            <Flex direction='column'  alignItems='center'>
                                 <Text
                                     color={textColorPrimary}
                                     fontWeight='bold'

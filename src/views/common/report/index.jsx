@@ -6,7 +6,8 @@ import {
     SimpleGrid,
     Button,
     Text,
-    Image
+    Image,
+    Link
 } from "@chakra-ui/react";
 
 import {
@@ -34,6 +35,8 @@ import {
 import Card from "components/card/Card.js";
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link as ReachLink } from "react-router-dom";
+
 
 import MiniStatistics from "components/card/MiniStatistics";
 import IconBox from "components/icons/IconBox";
@@ -56,26 +59,40 @@ export default function UserReports() {
     }
     const [ESG, setESG] = React.useState([]);
     const [portfilo, setPortfilo] = React.useState([]);
-    const [favoriteESG, setFavoriteESG] = useState("Environment");
+    const [favoriteESG, setFavoriteESG] = useState("Environmental");
     const [treePng, setTreehugger] = useState("4.png");
     const [peoplePng, setPeoplePng] = useState("5.png");
     const [goverancePng, setGoverancePng] = useState("6.png");
+    const id = localStorage.id
 
     
-
-    console.log(localStorage.role)
+    console.log(localStorage)
     useEffect(() => {
-        fetch("http://localhost:5004/EsgScore/1", {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
+        setFavoriteESG(localStorage.highest_Score)
+        if (localStorage.highest_Score === "Environmental") {
+            setTreehugger("1.png")
+        }
+        else if (localStorage.highest_Score === "Social") {
+            setPeoplePng("2.png")
+        }
+        else if (localStorage.highest_Score === "Governance") {
+            setGoverancePng("3.png")
+        }
+        
+
+        fetch(`http://localhost:5198/scoring`, {
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
             },
+            body:JSON.stringify(
+               {"cid": id}
+            )
         })
             .then((res) => res.json())
             .then((data) => {
-                setESG(data['data']);
-                console.log("ESG")
-                console.log(data['data'])
+                console.log(data.data.equity)
+                setESG(data.data.equity);
                 // console.log(data.filter(course => course.id === id)[0])
             });
 
@@ -87,16 +104,15 @@ export default function UserReports() {
         })
             .then((res) => res.json())
             .then((data) => {
-                setPortfilo(data[1]);
-                console.log("Portfilo")
-                console.log(data[0])
-                // console.log(data.filter(course => course.id === id)[0])
+                if (localStorage.riskAppetiteScore <= 30) {
+                    setPortfilo(data[2]);
+                } else if (localStorage.riskAppetiteScore <= 60) {
+                    setPortfilo(data[1]);
+                } else {
+                    setPortfilo(data[0]);
+                }
             });
     }, []);
-
-    useEffect(() => {
-        setPeoplePng("2.png")
-    }, [imageURL])
 
     return (
         <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
@@ -118,12 +134,12 @@ export default function UserReports() {
                     mx='1rem'>
                     Your current portfilo has a ESG rating of:
                 </Text>
-                <SimpleGrid
-                    columns={{ base: 1, md: 2, lg: 3, "2xl": 3 }}
-                    gap='1rem'
-                    mx='auto'
-                    maxW="600px"
-                    mb='1rem'>
+                    <SimpleGrid
+                        columns={{ base: 1, md: 2, lg: 3, "2xl": 3 }}
+                        gap='1rem'
+                        mx='auto'
+                        maxW="600px"
+                        mb='1rem'>
                         <MiniStatistics
                             startContent={
                                 <IconBox
@@ -136,7 +152,7 @@ export default function UserReports() {
                                 />
                             }
                             name='Environment'
-                            value ={`${ESG.env}`}
+                            value={`${ESG.env}`}
                         />
                         <MiniStatistics
                             startContent={
@@ -166,79 +182,79 @@ export default function UserReports() {
                             name='Governance'
                             value={`${ESG.gov}`}
                         />
-    
-                </SimpleGrid></>)
+
+                    </SimpleGrid></>)
                 : <><Text
-                color={textColorPrimary}
-                fontWeight='bold'
-                fontSize='3xl'
-                my='0.5rem'
-                mx='1rem'>
-                We recommended the following portfilo breakdown:
-            </Text>
-                <SimpleGrid
-                    columns={{ base: 1, md: 2, lg: 4, "2xl": 4 }}
-                    gap='2rem'
-                    mx='auto'
-                    maxW="800px"
-                    mb='1rem'>
-                    <MiniStatistics
-                        startContent={
-                            <IconBox
-                                w='56px'
-                                h='56px'
-                                bg={boxBg}
-                                icon={
-                                    <Icon w='32px' h='32px' as={MdBusiness} color={brandColor} />
-                                }
-                            />
-                        }
-                        name='Equity'
-                        value={portfilo.Equity + "%"}
-                    />
-                    <MiniStatistics
-                        startContent={
-                            <IconBox
-                                w='56px'
-                                h='56px'
-                                bg={boxBg}
-                                icon={
-                                    <Icon w='32px' h='32px' as={TbFileDollar} color={brandColor} />
-                                }
-                            />
-                        }
-                        name='Bonds'
-                        value={portfilo.Bonds + "%"}
-                    />
-                    <MiniStatistics
-                        startContent={
-                            <IconBox
-                                w='56px'
-                                h='56px'
-                                bg={boxBg}
-                                icon={
-                                    <Icon w='32px' h='32px' as={AiFillGolden} color={brandColor} />
-                                }
-                            />
-                        }
-                        name='Gold'
-                        value={portfilo.Gold + "%"}
-                    />
-                    <MiniStatistics
-                        startContent={
-                            <IconBox
-                                w='56px'
-                                h='56px'
-                                bg={boxBg}
-                                icon={
-                                    <Icon w='32px' h='32px' as={MdSavings} color={brandColor} />
-                                }
-                            />
-                        }
-                        name='Saving'
-                        value={portfilo['Saving Plans'] + "%"}
-                    />
-                </SimpleGrid></>}
+                    color={textColorPrimary}
+                    fontWeight='bold'
+                    fontSize='3xl'
+                    my='0.5rem'
+                    mx='1rem'>
+                    We recommended the following portfilo breakdown:
+                </Text>
+                    <SimpleGrid
+                        columns={{ base: 1, md: 2, lg: 4, "2xl": 4 }}
+                        gap='2rem'
+                        mx='auto'
+                        maxW="800px"
+                        mb='1rem'>
+                        <MiniStatistics
+                            startContent={
+                                <IconBox
+                                    w='56px'
+                                    h='56px'
+                                    bg={boxBg}
+                                    icon={
+                                        <Icon w='32px' h='32px' as={MdBusiness} color={brandColor} />
+                                    }
+                                />
+                            }
+                            name='Equity'
+                            value={portfilo.Equity + "%"}
+                        />
+                        <MiniStatistics
+                            startContent={
+                                <IconBox
+                                    w='56px'
+                                    h='56px'
+                                    bg={boxBg}
+                                    icon={
+                                        <Icon w='32px' h='32px' as={TbFileDollar} color={brandColor} />
+                                    }
+                                />
+                            }
+                            name='Bonds'
+                            value={portfilo.Bonds + "%"}
+                        />
+                        <MiniStatistics
+                            startContent={
+                                <IconBox
+                                    w='56px'
+                                    h='56px'
+                                    bg={boxBg}
+                                    icon={
+                                        <Icon w='32px' h='32px' as={AiFillGolden} color={brandColor} />
+                                    }
+                                />
+                            }
+                            name='Gold'
+                            value={portfilo.Gold + "%"}
+                        />
+                        <MiniStatistics
+                            startContent={
+                                <IconBox
+                                    w='56px'
+                                    h='56px'
+                                    bg={boxBg}
+                                    icon={
+                                        <Icon w='32px' h='32px' as={MdSavings} color={brandColor} />
+                                    }
+                                />
+                            }
+                            name='Saving'
+                            value={portfilo['Saving Plans'] + "%"}
+                        />
+                    </SimpleGrid></>}
 
 
             <Text
@@ -268,7 +284,7 @@ export default function UserReports() {
                             />
                         }
                         name='Environment'
-                        value='50%'
+                        value={`${localStorage.env_Score}%`}
                     />
                 </div>
                 <div onClick={() => changeView(peoplePng)}>
@@ -284,7 +300,7 @@ export default function UserReports() {
                             />
                         }
                         name='Social'
-                        value='40%'
+                        value={`${localStorage.soc_Score}%`}
                     />
                 </div>
                 <div onClick={() => changeView(goverancePng)}>
@@ -300,14 +316,19 @@ export default function UserReports() {
                             />
                         }
                         name='Governance'
-                        value='10%'
+                        value={`${localStorage.gov_Score}%`}
                     />
                 </div>
 
             </SimpleGrid>
-            <Card w='40rem' my='3rem' mx='auto'>
+            <Card w='40rem' my='3rem' mx='auto' alignItems="center">
                 <Image src={`/reportImage/${imageURL}`} mx='auto' h='30rem'></Image>
-                <Button my='2rem' mx='auto' size='lg' leftIcon={<MdManageSearch />} colorScheme='purple'>Show my recommendation</Button>
+                <Link
+                    as = {ReachLink} 
+                    to = '/admin/recommendation'>
+                    <Button my='2rem' mx='auto' size='lg' leftIcon={<MdManageSearch />} colorScheme='purple'>Show my recommendation</Button>
+                </Link>
+
             </Card>
 
         </Box>

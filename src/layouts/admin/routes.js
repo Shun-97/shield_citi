@@ -21,7 +21,8 @@ import Home from "views/common/home";
 import Quiz from "views/common/quiz";
 // import Quiz from "views/common/quiz";
 import Report from "views/common/report";
-import recommendation from "views/common/recommendation";
+import Recommendation from "views/common/recommendation";
+import KYCquiz from "views/common/KYCQuiz"
 
 const routes = [
   {
@@ -32,11 +33,11 @@ const routes = [
     component: Home,
   },
   {
-    name: "Explore",
+    name: "Intro Quiz",
     layout: "/admin",
-    icon: <Icon as={MdBarChart} width='20px' height='20px' color='inherit' />,
-    path: "/data-tables",
-    component: DataTables,
+    path: "/KYCquiz",
+    icon: <Icon as={MdOutlineQuiz} width='20px' height='20px' color='inherit' />,
+    component: KYCquiz,
   },
   {
     name: "ESG Quiz",
@@ -57,7 +58,7 @@ const routes = [
     layout: "/admin",
     path: "/recommendation",
     icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
-    component: recommendation,
+    component: Recommendation,
   }
 ];
 
