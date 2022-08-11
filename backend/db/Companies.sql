@@ -27,7 +27,6 @@ CREATE TABLE `COMPANIES` (
 
 
 INSERT INTO `COMPANIES` (`ticker`, `name`, `industry`, `price`, `total`, `env`, `soc`, `gov`) VALUES
-('LUV', 'Southwest Airlines Co.', 'Airlines', '38.34', '32', '11.3', '14.9', '6.2'),
 ('AAPL', 'Apple Inc.', 'Technology', '164.92', '16.0', '0.6', '6.9', '8.9'),
 ('ORK.OL', 'Orkla ASA', 'Food', null, null, null, null, null), 
 ('ABF.L', 'Associated British Foods plc', 'Food', null, null, null, null, null), 
