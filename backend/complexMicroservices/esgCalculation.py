@@ -27,6 +27,49 @@ EQUITY_URL = "http://localhost:5006/"
 ESG_PROFILING_URL = "http://localhost:5004/"
 
 
+
+@app.route("/getExistingCustomerValues", methods=['POST'])
+def getExistingIndustries():
+        if request.is_json:
+            # try:
+            data = request.get_json()
+            cid = data['cid']
+
+            result = processExistingIndustries(cid)
+            return jsonify(
+                {
+                    "code": 200,
+                    "data": {
+                        "equity": result
+                    }
+                }
+            ), 200
+
+def processExistingIndustries(cid):
+    response1 = invoke_http(CUSTOMER_URL + "/CustomerPortfolio/"+str(cid), method='GET')
+    positionList = response1['data']
+
+    response2 = invoke_http(method='GET', url=EQUITY_URL + "indexedEquity")
+    equityJson = response2['data']['equity']
+    # print("*****")
+    # print(type(equityJson))
+
+    output = []
+    
+    for position in positionList:
+        position = json.dumps(position)
+        positionDict = json.loads(position)
+        ticker = positionDict['ticker']
+
+        equity = equityJson[ticker]
+        equity = json.dumps(equity)
+        print(equity)
+        equityDict = json.loads(equity)
+
+        output.append(equityDict["industry"])
+    
+    return list(set(output))
+
 @app.route("/scoring", methods=['POST'])
 def scoring():
     if request.is_json:
