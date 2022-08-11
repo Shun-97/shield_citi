@@ -35,7 +35,8 @@ CREATE TABLE `EXISTING_CUST_PORTFOLIO`
 (
     `cid` int NOT NULL,
     `ticker` varchar(50) NOT NULL,
-    `qty` int(11) NOT NULL    
+    `qty` int(11) NOT NULL,  
+    PRIMARY KEY(ticker)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 

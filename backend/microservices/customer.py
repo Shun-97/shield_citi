@@ -1,4 +1,5 @@
 from locale import currency
+from unicodedata import name
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import and_, or_
@@ -21,7 +22,7 @@ limiter = Limiter(
     default_limits=["2000 per day", "500 per hour"]
 )
 # app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('dbURL') or 'mysql+mysqlconnector://root@localhost:3306/ESD5'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@localhost:8889/NEW_CUST_KYC'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@localhost:8889/CUSTOMER'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -42,6 +43,43 @@ class NewCustKyc(db.Model):
     def json(self):
         return {"cid":self.cid, "name":self.name, "risk_Appetite":self.risk_Appetite}
 
+class ExistingCustPortfolio(db.Model):
+    __tablename__ = 'EXISTING_CUST_PORTFOLIO'
+    cid = cid = db.Column(db.Integer, nullable = False)
+    ticker = db.Column(db.String(120), primary_key=True)
+    qty = db.Column(db.Integer, nullable = False)
+
+    def __init__(self, cid, ticker, qty):
+        self.cid = cid
+        self.ticker = ticker
+        self.qty = qty
+    
+    def json(self):
+        return {"cid" : self.cid, "ticker" : self.ticker, "qty" : self.qty }
+    
+@app.route("/CustomerPortfolio/<int:cid>")
+def get_customer_portfolio_by_cid(cid):
+    customerPortfolio = ExistingCustPortfolio.query.filter_by(cid=cid)
+
+    # print(customerPortfolio)
+
+    result = []
+    for a_portfolio in customerPortfolio:
+        print(a_portfolio)
+        if a_portfolio:
+            result.append(a_portfolio)
+    return jsonify(
+        {
+            "code": 200,
+            "data": [portfolio.json() for portfolio in result]
+        }
+)
+    return jsonify(
+        {
+            "code": 404,
+            "message": "ESG Score for CID: " + str(cid) + " is not found."
+        }
+), 404
 
 @app.route("/customer")
 def get_all():
@@ -71,12 +109,11 @@ def calculate_Risk_Appetite():
         for i in range(0,len(data)-1):
             risk_appetite_score += (data[i]["Selected"]/data[i]["Max"])
         risk_appetite_percentage = (risk_appetite_score / (len(data)-1)) * 100
-        print(risk_appetite_score)
-        print("podsa")
+        
+        
 
         if(risk_appetite_score):
-            print("yeet it works bro")
-            print(risk_appetite_percentage)
+            
 
             return jsonify(
                 {
