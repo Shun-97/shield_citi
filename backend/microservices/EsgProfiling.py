@@ -22,7 +22,7 @@ limiter = Limiter(
     default_limits=["2000 per day", "500 per hour"]
 )
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@localhost:8889/CUST_ESG_SCORE'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:@localhost/CUST_ESG_SCORE'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -47,7 +47,6 @@ class CustEsgScore(db.Model):
 
 @app.route("/EsgScore/<int:cid>")
 def get_Esg_Score_byCustId(cid):
-
     try: 
         esgScore = CustEsgScore.query.filter_by(cid=cid).first()
         if esgScore:

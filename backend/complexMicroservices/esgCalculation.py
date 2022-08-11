@@ -17,7 +17,7 @@ limiter = Limiter(
     default_limits=["200 per day", "50 per hour"]
 )
 # app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('dbURL') or 'mysql+mysqlconnector://root@localhost:3306/ESD5'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:root@localhost:8889/backEnd'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root@localhost/backEnd'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
