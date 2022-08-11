@@ -76,10 +76,10 @@ export default function Recommendation() {
 
                     <Spacer />
                     <Select onChange={(e) => changeIndustry(e)} variant='filled' placeholder='Filter by industry' w='200px' >
-                        <option value='Transport'>Transport</option>
-                        <option value='OilAndGas'>OilAndGas</option>
+                        <option value='Biotechnology'>Biotechnology</option>
+                        <option value='OilAndGas'>Oil and Gas</option>
                         <option value='Technology'>Technology</option>
-                        <option value='AerospaceAndDefence'>AerospaceAndDefence</option>
+                        <option value='AerospaceAndDefence'>Aerospace and defence</option>
                         <option value='Food'>Food</option>
                     </Select>
                 </Flex>

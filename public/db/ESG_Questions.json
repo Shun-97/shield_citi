@@ -41,7 +41,7 @@
     } 
     ,{
         "Question_number": 9,
-        "Question": "How much of a company’s resources should be used to mitigate bribery and corruption? Assume that the higher ups of the company have a clean record thus far.",
+        "Question": "How much of a company’s resources do you think should be used to mitigate bribery and corruption? Assume that the higher ups of the company have a clean record thus far.",
         "Choices": [["Less than 15%","G",1], ["Between 15%-40%","G",2], ["Above 40%","G",3]]
     } 
     

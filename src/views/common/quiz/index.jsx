@@ -45,7 +45,26 @@ export default function UserReports() {
     function handleSubmit(e) {
         e.preventDefault();
         console.log('You clicked submit.');
+        // console.log(qnAnswer)
+        submitQuiz(qnAnswer)
+    }
+
+    const submitQuiz = () =>{
+        console.log("now sending to BE")
         console.log(qnAnswer)
+        fetch('http://localhost:5004/', {
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify({
+               qnAnswer
+            })
+        }).then(res=>res.json())
+        .then(data =>{
+            console.log("failed")
+        })
+
     }
 
     const storeChoice = (value,currentQn) => {
@@ -104,7 +123,7 @@ export default function UserReports() {
             .then((res) => res.json())
             .then((data) => {
                 setAllQn(data);
-                console.log(data)
+                // console.log(data)
             });
 
         fetch("/db/ESGQuiz.json", {

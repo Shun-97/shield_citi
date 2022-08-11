@@ -203,18 +203,20 @@ function SignUp() {
                                 value='Married'>Married</Radio>
                             </HStack>
                         </RadioGroup>
-                        <Button
-                            my = '24px'
-                            fontSize='sm'
-                            variant='brand'
-                            fontWeight='500'
-                            w='100%'
-                            h='50'
-                            mb='24px'
-                            onClick={handleSignIn}
-                        >
-                            Sign Up
-                        </Button>
+                        <NavLink to='/admin/KYCquiz'>
+                            <Button
+                                my = '24px'
+                                fontSize='sm'
+                                variant='brand'
+                                fontWeight='500'
+                                w='100%'
+                                h='50'
+                                mb='24px'
+                                onClick={handleSignIn}
+                            >
+                                Personality Quiz! 
+                            </Button>
+                        </NavLink>
                     </FormControl>
                 </Flex>
             </Flex>
