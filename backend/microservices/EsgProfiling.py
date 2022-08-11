@@ -45,6 +45,24 @@ class CustEsgScore(db.Model):
     def json(self):
         return{"cid" : self.cid, "env" : self.env, "soc" : self.soc, "gov" : self.gov}
 
+@app.route("/EsgScore/<int:cid>")
+def get_Esg_Score_byCustId(cid):
+    esgScore = CustEsgScore.query.filter_by(cid=cid).first()
+
+    if esgScore:
+        return jsonify(
+            {
+                "code": 200,
+                "data": esgScore.json()
+            }
+        )
+    return jsonify(
+        {
+            "code": 404,
+            "message": "ESG Score for CID: " + cid + " is not found."
+        }
+    ), 404
+
 @app.route("/calculateEsgScore", methods=["POST", "GET"])
 def calculate_Esg_Score():
 

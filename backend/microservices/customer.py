@@ -42,6 +42,7 @@ class NewCustKyc(db.Model):
     def json(self):
         return {"cid":self.cid, "name":self.name, "risk_Appetite":self.risk_Appetite}
 
+
 @app.route("/customer")
 def get_all():
     customerList = NewCustKyc.query.all()
