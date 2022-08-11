@@ -10,12 +10,6 @@ import {
   MdAssignment,
 } from "react-icons/md";
 
-// Admin Imports
-import MainDashboard from "views/admin/default";
-import Profile from "views/admin/profile";
-import DataTables from "views/admin/dataTables";
-import SignInCentered from "views/auth/signIn";
-
 // Common import
 import Home from "views/common/home";
 import Quiz from "views/common/quiz";

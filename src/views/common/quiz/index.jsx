@@ -70,8 +70,9 @@ export default function UserReports() {
                 localStorage.setItem("gov_Score", data.data['gov_score'])
                 localStorage.setItem("soc_Score", data.data['soc score'])
                 localStorage.setItem("highest_Score", data.data['highest_score'])
-                // console.log(data.data)
+                // console.log(localStorage)
                 history.push("/admin/report");
+                
             })
 
     }

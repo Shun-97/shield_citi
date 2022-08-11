@@ -52,7 +52,7 @@ export default function UserReports() {
         "0px 18px 40px rgba(112, 144, 176, 0.12)",
         "unset"
     );
-    const [imageURL, setImageURL] = React.useState("1.png");
+    const [imageURL, setImageURL] = React.useState("4.png");
     const [isExisting, setIsExisting] = React.useState(localStorage.role === "existing");
     const changeView = (imageName) => {
         setImageURL(imageName)
@@ -71,12 +71,15 @@ export default function UserReports() {
         setFavoriteESG(localStorage.highest_Score)
         if (localStorage.highest_Score === "Environmental") {
             setTreehugger("1.png")
+            setImageURL("1.png")
         }
         else if (localStorage.highest_Score === "Social") {
             setPeoplePng("2.png")
+            setImageURL("2.png")
         }
         else if (localStorage.highest_Score === "Governance") {
             setGoverancePng("3.png")
+            setImageURL("3.png")
         }
         
 
@@ -132,7 +135,7 @@ export default function UserReports() {
                     fontSize='3xl'
                     my='0.5rem'
                     mx='1rem'>
-                    Your current portfilo has a ESG rating of:
+                    Your current portfilo has a ESG Risk of:
                 </Text>
                     <SimpleGrid
                         columns={{ base: 1, md: 2, lg: 3, "2xl": 3 }}
