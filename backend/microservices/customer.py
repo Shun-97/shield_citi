@@ -45,7 +45,7 @@ class NewCustKyc(db.Model):
 
 class ExistingCustPortfolio(db.Model):
     __tablename__ = 'EXISTING_CUST_PORTFOLIO'
-    cid = cid = db.Column(db.Integer, nullable = False)
+    cid = db.Column(db.Integer, primary_key=True)
     ticker = db.Column(db.String(120), primary_key=True)
     qty = db.Column(db.Integer, nullable = False)
 
@@ -56,49 +56,20 @@ class ExistingCustPortfolio(db.Model):
     
     def json(self):
         return {"cid" : self.cid, "ticker" : self.ticker, "qty" : self.qty }
+
+
+class NewCustIndustryPreferred(db.Model):
+    __tablename__ = "NEW_CUST_PREFERRED_INDUSTRY"
+    cid = db.Column(db.Integer, nullable = False)
+    preferred_industry = db.Column(db.String(120), primary_key=True)
+
+    def __init__(self, cid, preferred_industry):
+        self.cid = cid
+        self.preferred_industry = preferred_industry
     
-@app.route("/CustomerPortfolio/<int:cid>")
-def get_customer_portfolio_by_cid(cid):
-    customerPortfolio = ExistingCustPortfolio.query.filter_by(cid=cid)
+    def json(self):
+        return {"cid" : self.cid, "preferred_industry" : self.preferred_industry}
 
-    # print(customerPortfolio)
-
-    result = []
-    for a_portfolio in customerPortfolio:
-        print(a_portfolio)
-        if a_portfolio:
-            result.append(a_portfolio)
-    return jsonify(
-        {
-            "code": 200,
-            "data": [portfolio.json() for portfolio in result]
-        }
-)
-    return jsonify(
-        {
-            "code": 404,
-            "message": "ESG Score for CID: " + str(cid) + " is not found."
-        }
-), 404
-
-@app.route("/customer")
-def get_all():
-    customerList = NewCustKyc.query.all()
-    if len(customerList):
-        return jsonify(
-            {
-            "code": 200,
-            "data": {
-                "customer": [customer.json() for customer in customerList]
-                }
-            }
-        )
-    return jsonify(
-        {
-            "code": 404,
-            "message": "There are no customers."
-        }
-    ), 404
 
 @app.route("/calculateRiskAppetite", methods=['POST', 'GET'])
 def calculate_Risk_Appetite():
@@ -136,7 +107,157 @@ def calculate_Risk_Appetite():
             }
         ), 500
 
-        
+@app.route("/addCustomerPortfolio/<int:cid>/<string:ticker>/<int:qty>", methods=['POST'])
+def add_customer_portfolio_by_cid(cid, ticker, qty):
+    if(ExistingCustPortfolio.query.filter_by(cid=cid) and ExistingCustPortfolio.query.filter_by(ticker=ticker).first()):
+        return jsonify(
+            {
+                "code": 400,
+                "data": {
+                    "cid": cid,
+                    "ticker" : ticker,
+                    "qty" : qty
+                },
+                "message": "Customer Portfolio already exists."
+            }
+        ), 400
+    
+    data = request.get_json()
+    custPortfolio = ExistingCustPortfolio(cid, ticker, qty)
+
+    try:
+        db.session.add(custPortfolio)
+        db.session.commit()
+    except Exception as e:
+        return jsonify(
+            {
+                "code": 500,
+                "data": {
+                    "cid": cid,
+                    "ticker" : ticker
+                },
+                "message": "An error occurred creating the Customer Portfolio. Error is " + str(e)
+            }
+        ), 500
+
+    return jsonify(
+        {
+            "code": 201,
+            "data": custPortfolio.json()
+        }
+    ), 201
+
+
+@app.route("/CustomerPortfolio/<int:cid>")
+def get_customer_portfolio_by_cid(cid):
+
+    try:
+        customerPortfolio = ExistingCustPortfolio.query.filter_by(cid=cid)
+        result = []
+        for a_portfolio in customerPortfolio:
+            print(a_portfolio)
+            if a_portfolio:
+                result.append(a_portfolio)
+        return jsonify(
+            {
+                "code": 200,
+                "data": [portfolio.json() for portfolio in result]
+            }
+    )
+
+    except:
+        return jsonify(
+            {
+                "code": 404,
+                "message": "ESG Score for CID: " + str(cid) + " is not found."
+            }
+    ), 404
+
+@app.route("/customer")
+def get_all_customer_portfolio():
+    try:
+        customerList = NewCustKyc.query.all()
+        if len(customerList):
+            return jsonify(
+                {
+                "code": 200,
+                "data": {
+                    "customer": [customer.json() for customer in customerList]
+                    }
+                }
+            )
+    except:
+        return jsonify(
+            {
+                "code": 404,
+                "message": "There are no customers."
+            }
+        ), 404
+
+
+@app.route("/custIndustryPreferred")
+def get_all_preference():
+    try:
+        preference_list = NewCustIndustryPreferred.query.all()
+        if len(preference_list):
+            return jsonify(
+                {
+                "code": 200,
+                "data": {
+                    "customer": [preference.json() for preference in preference_list]
+                    }
+                }
+            )
+    except:
+        return jsonify(
+            {
+                "code": 404,
+                "message": "There are no customer preference."
+            }
+        ), 404
+
+@app.route("/addCustIndustryPreference/<int:cid>/<string:preferred_industry>", methods = ["POST"])
+def add_preferences(cid, preferred_industry):
+
+    if(NewCustIndustryPreferred.query.filter_by(cid=cid)and NewCustIndustryPreferred.query.filter_by(preferred_industry=preferred_industry).first()):
+        return jsonify(
+            {
+                "code": 400,
+                "data": {
+                    "cid": cid,
+                    "preferred_industry" : preferred_industry,
+                },
+                "message": "Customer Preferred Industry already exists."
+            }
+        ), 400
+    
+    data = request.get_json()
+    custPreferredIndustry = NewCustIndustryPreferred(cid, preferred_industry)
+
+    try:
+        db.session.add(custPreferredIndustry)
+        db.session.commit()
+
+    except Exception as e:
+        return jsonify(
+            {
+                "code": 500,
+                "data": {
+                    "cid": cid,
+                    "preferred_industry" : preferred_industry,
+                },
+                "message": "An error occurred creating the Customer Preferred Industry. Error is " + str(e)
+            }
+        ), 500
+
+    return jsonify(
+        {
+            "code": 201,
+            "data": custPreferredIndustry.json()
+        }
+    ), 201
+    
+
 
 
 
