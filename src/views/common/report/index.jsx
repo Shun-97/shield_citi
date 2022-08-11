@@ -33,7 +33,7 @@ import {
 // Custom components
 import Card from "components/card/Card.js";
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import MiniStatistics from "components/card/MiniStatistics";
 import IconBox from "components/icons/IconBox";
@@ -50,15 +50,22 @@ export default function UserReports() {
         "unset"
     );
     const [imageURL, setImageURL] = React.useState("1.png");
-    
+    const [isExisting, setIsExisting] = React.useState(localStorage.role === "existing");
     const changeView = (imageName) => {
         setImageURL(imageName)
     }
     const [ESG, setESG] = React.useState([]);
     const [portfilo, setPortfilo] = React.useState([]);
+    const [favoriteESG, setFavoriteESG] = useState("Environment");
+    const [treePng, setTreehugger] = useState("4.png");
+    const [peoplePng, setPeoplePng] = useState("5.png");
+    const [goverancePng, setGoverancePng] = useState("6.png");
 
+    
+
+    console.log(localStorage.role)
     useEffect(() => {
-        fetch("/db/ESG_Output.json", {
+        fetch("http://localhost:5004/EsgScore/1", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -66,30 +73,29 @@ export default function UserReports() {
         })
             .then((res) => res.json())
             .then((data) => {
-                setESG(data[0]);
+                setESG(data['data']);
                 console.log("ESG")
-                console.log(data[0])
+                console.log(data['data'])
                 // console.log(data.filter(course => course.id === id)[0])
             });
 
-            fetch("/db/Portfilo_Output.json", {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            })
-                .then((res) => res.json())
-                .then((data) => {
-                    setPortfilo(data[1]);
-                    console.log("Portfilo")
-                    console.log(data[0])
-                    // console.log(data.filter(course => course.id === id)[0])
-                });
+        fetch("/db/Portfilo_Output.json", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                setPortfilo(data[1]);
+                console.log("Portfilo")
+                console.log(data[0])
+                // console.log(data.filter(course => course.id === id)[0])
+            });
     }, []);
 
     useEffect(() => {
-        console.log(imageURL)
-        console.log('LOL')
+        setPeoplePng("2.png")
     }, [imageURL])
 
     return (
@@ -102,7 +108,67 @@ export default function UserReports() {
                 mx='1rem'>
                 Based on what you answered...
             </Text>
-            <Text
+
+            {isExisting
+                ? (<><Text
+                    color={textColorPrimary}
+                    fontWeight='bold'
+                    fontSize='3xl'
+                    my='0.5rem'
+                    mx='1rem'>
+                    Your current portfilo has a ESG rating of:
+                </Text>
+                <SimpleGrid
+                    columns={{ base: 1, md: 2, lg: 3, "2xl": 3 }}
+                    gap='1rem'
+                    mx='auto'
+                    maxW="600px"
+                    mb='1rem'>
+                        <MiniStatistics
+                            startContent={
+                                <IconBox
+                                    w='56px'
+                                    h='56px'
+                                    bg={boxBg}
+                                    icon={
+                                        <Icon w='32px' h='32px' as={TbLeaf} color={brandColor} />
+                                    }
+                                />
+                            }
+                            name='Environment'
+                            value ={`${ESG.env}`}
+                        />
+                        <MiniStatistics
+                            startContent={
+                                <IconBox
+                                    w='56px'
+                                    h='56px'
+                                    bg={boxBg}
+                                    icon={
+                                        <Icon w='32px' h='32px' as={AiTwotoneHeart} color={brandColor} />
+                                    }
+                                />
+                            }
+                            name='Social'
+                            value={`${ESG.soc}`}
+                        />
+                        <MiniStatistics
+                            startContent={
+                                <IconBox
+                                    w='56px'
+                                    h='56px'
+                                    bg={boxBg}
+                                    icon={
+                                        <Icon w='32px' h='32px' as={RiGovernmentFill} color={brandColor} />
+                                    }
+                                />
+                            }
+                            name='Governance'
+                            value={`${ESG.gov}`}
+                        />
+    
+                </SimpleGrid></>)
+                : <><Text
                 color={textColorPrimary}
                 fontWeight='bold'
                 fontSize='3xl'
@@ -110,69 +176,71 @@ export default function UserReports() {
                 mx='1rem'>
                 We recommended the following portfilo breakdown:
             </Text>
-            <SimpleGrid
-                columns={{ base: 1, md: 2, lg: 4, "2xl": 4 }}
-                gap='2rem'
-                mx='auto'
-                maxW="800px"
-                mb='1rem'>
-                <MiniStatistics
-                    startContent={
-                        <IconBox
-                            w='56px'
-                            h='56px'
-                            bg={boxBg}
-                            icon={
-                                <Icon w='32px' h='32px' as={MdBusiness} color={brandColor} />
-                            }
-                        />
-                    }
-                    name='Equity'
-                    value= {portfilo.Equity + "%"} 
-                />
-                <MiniStatistics
-                    startContent={
-                        <IconBox
-                            w='56px'
-                            h='56px'
-                            bg={boxBg}
-                            icon={
-                                <Icon w='32px' h='32px' as={TbFileDollar} color={brandColor} />
-                            }
-                        />
-                    }
-                    name='Bonds'
-                    value= {portfilo.Bonds + "%"} 
-                />
-                <MiniStatistics
-                    startContent={
-                        <IconBox
-                            w='56px'
-                            h='56px'
-                            bg={boxBg}
-                            icon={
-                                <Icon w='32px' h='32px' as={AiFillGolden} color={brandColor} />
-                            }
-                        />
-                    }
-                    name='Gold'
-                    value= {portfilo.Gold + "%"} 
-                />
-                <MiniStatistics
-                    startContent={
-                        <IconBox
-                            w='56px'
-                            h='56px'
-                            bg={boxBg}
-                            icon={
-                                <Icon w='32px' h='32px' as={MdSavings} color={brandColor} />
-                            }
-                        />
-                    }
-                    name='Saving'
-                    value= {portfilo['Saving Plans'] + "%"}
-                />
-            </SimpleGrid>
+                <SimpleGrid
+                    columns={{ base: 1, md: 2, lg: 4, "2xl": 4 }}
+                    gap='2rem'
+                    mx='auto'
+                    maxW="800px"
+                    mb='1rem'>
+                    <MiniStatistics
+                        startContent={
+                            <IconBox
+                                w='56px'
+                                h='56px'
+                                bg={boxBg}
+                                icon={
+                                    <Icon w='32px' h='32px' as={MdBusiness} color={brandColor} />
+                                }
+                            />
+                        }
+                        name='Equity'
+                        value={portfilo.Equity + "%"}
+                    />
+                    <MiniStatistics
+                        startContent={
+                            <IconBox
+                                w='56px'
+                                h='56px'
+                                bg={boxBg}
+                                icon={
+                                    <Icon w='32px' h='32px' as={TbFileDollar} color={brandColor} />
+                                }
+                            />
+                        }
+                        name='Bonds'
+                        value={portfilo.Bonds + "%"}
+                    />
+                    <MiniStatistics
+                        startContent={
+                            <IconBox
+                                w='56px'
+                                h='56px'
+                                bg={boxBg}
+                                icon={
+                                    <Icon w='32px' h='32px' as={AiFillGolden} color={brandColor} />
+                                }
+                            />
+                        }
+                        name='Gold'
+                        value={portfilo.Gold + "%"}
+                    />
+                    <MiniStatistics
+                        startContent={
+                            <IconBox
+                                w='56px'
+                                h='56px'
+                                bg={boxBg}
+                                icon={
+                                    <Icon w='32px' h='32px' as={MdSavings} color={brandColor} />
+                                }
+                            />
+                        }
+                        name='Saving'
+                        value={portfilo['Saving Plans'] + "%"}
+                    />
+                </SimpleGrid></>}
+
+
             <Text
                 color={textColorPrimary}
                 fontWeight='bold'
@@ -187,61 +255,61 @@ export default function UserReports() {
                 mx='auto'
                 maxW="600px"
                 mb='1rem'>
-                <div onClick = {() => changeView("1.png")}>
-                <MiniStatistics
-                    startContent={
-                        <IconBox
-                            w='56px'
-                            h='56px'
-                            bg={boxBg}
-                            icon={
-                                <Icon w='32px' h='32px' as={TbLeaf} color={brandColor} />
-                            }
-                        />
-                    }
-                    name='Environment'
-                    value='50%'
-                />
+                <div onClick={() => changeView(treePng)}>
+                    <MiniStatistics
+                        startContent={
+                            <IconBox
+                                w='56px'
+                                h='56px'
+                                bg={boxBg}
+                                icon={
+                                    <Icon w='32px' h='32px' as={TbLeaf} color={brandColor} />
+                                }
+                            />
+                        }
+                        name='Environment'
+                        value='50%'
+                    />
                 </div>
-                <div onClick = {() => changeView("2.png")}>
-                <MiniStatistics
-                    startContent={
-                        <IconBox
-                            w='56px'
-                            h='56px'
-                            bg={boxBg}
-                            icon={
-                                <Icon w='32px' h='32px' as={AiTwotoneHeart} color={brandColor} />
-                            }
-                        />
-                    }
-                    name='Social'
-                    value='40%'
-                />
+                <div onClick={() => changeView(peoplePng)}>
+                    <MiniStatistics
+                        startContent={
+                            <IconBox
+                                w='56px'
+                                h='56px'
+                                bg={boxBg}
+                                icon={
+                                    <Icon w='32px' h='32px' as={AiTwotoneHeart} color={brandColor} />
+                                }
+                            />
+                        }
+                        name='Social'
+                        value='40%'
+                    />
                 </div>
-                <div onClick = {() => changeView("3.png")}>
-                <MiniStatistics
-                    startContent={
-                        <IconBox
-                            w='56px'
-                            h='56px'
-                            bg={boxBg}
-                            icon={
-                                <Icon w='32px' h='32px' as={RiGovernmentFill} color={brandColor} />
-                            }
-                        />
-                    }
-                    name='Governance'
-                    value='10%'
-                />
+                <div onClick={() => changeView(goverancePng)}>
+                    <MiniStatistics
+                        startContent={
+                            <IconBox
+                                w='56px'
+                                h='56px'
+                                bg={boxBg}
+                                icon={
+                                    <Icon w='32px' h='32px' as={RiGovernmentFill} color={brandColor} />
+                                }
+                            />
+                        }
+                        name='Governance'
+                        value='10%'
+                    />
                 </div>
-                
+
             </SimpleGrid>
-            <Card w = '40rem' my = '3rem' mx = 'auto'>
-                <Image src={`/reportImage/${imageURL}`} mx='auto' h = '30rem'></Image>
-                <Button my='2rem' mx ='auto' size='lg' leftIcon={<MdManageSearch />} colorScheme='purple'>Show my recommendation</Button>
+            <Card w='40rem' my='3rem' mx='auto'>
+                <Image src={`/reportImage/${imageURL}`} mx='auto' h='30rem'></Image>
+                <Button my='2rem' mx='auto' size='lg' leftIcon={<MdManageSearch />} colorScheme='purple'>Show my recommendation</Button>
             </Card>
-            
+
         </Box>
     );
 }

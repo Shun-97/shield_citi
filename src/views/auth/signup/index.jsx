@@ -51,36 +51,17 @@ function SignUp() {
             There are missing fields
         </Alert>
     }
-
-
-    const demoAccount = {
-        "id": "1",
-        "userid": "demo",
-        "password": "1234"
-    }
-
+    localStorage.setItem('role', 'newUser');
+    localStorage.setItem('id', 99);
     const [show, setShow] = React.useState(false);
     const [SignIn, setSignIn] = useState({
-        "userid": "",
-        "password": "",
         "email": "",
+        "password": "",
+        "name": "",
         "martialStatus": "",
+        "income": "",
     })
     const handleClick = () => setShow(!show);
-    console.log(SignIn)
-    const handleSignIn = (e) => {
-        if (SignIn.userid === demoAccount.userid && SignIn.password === demoAccount.password) {
-            alert("Successfully signed in!");
-        } else {
-            if (SignIn.userid === "" || SignIn.password === "") {
-                setIsMissingInput(true);
-                setIsWrongPassword(false);
-            } else {
-                setIsMissingInput(false);
-                setIsWrongPassword(true);
-            }
-        }
-    }
 
     return (
         <DefaultAuth illustrationBackground={illustration} image={illustration}>
@@ -193,7 +174,7 @@ function SignUp() {
                             onChange={(e) => setSignIn({ ...SignIn, "email": e.target.value })}
                         />
                         <FormLabel as='legend'>Martial Status</FormLabel>
-                        <RadioGroup defaultValue='Single' >
+                        <RadioGroup my= '24px'defaultValue='Single' >
                             <HStack spacing='24px'>
                                 <Radio 
                                 onChange={(e) => setSignIn({ ...SignIn, "martialStatus": e.target.value })}
@@ -203,6 +184,19 @@ function SignUp() {
                                 value='Married'>Married</Radio>
                             </HStack>
                         </RadioGroup>
+                        <FormLabel as='legend'>Annual Income</FormLabel>
+                        <Input
+                            isRequired={true}
+                            variant='auth'
+                            fontSize='sm'
+                            ms={{ base: "0px", md: "0px" }}
+                            type='email'
+                            placeholder='Enter your annual income in SGD'
+                            mb='24px'
+                            fontWeight='500'
+                            size='lg'
+                            onChange={(e) => setSignIn({ ...SignIn, "income": e.target.value })}
+                        />
                         <NavLink to='/admin/KYCquiz'>
                             <Button
                                 my = '24px'
@@ -212,7 +206,6 @@ function SignUp() {
                                 w='100%'
                                 h='50'
                                 mb='24px'
-                                onClick={handleSignIn}
                             >
                                 Personality Quiz! 
                             </Button>

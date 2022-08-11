@@ -39,7 +39,6 @@ export default function Recommendation() {
             .then((data) => {
                 setAllData(data)
                 setDataList(data.sort((a, b) => b.profileScore < a.profileScore ? 1 : -1))
-
             })
     }, [])
 
