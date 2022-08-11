@@ -75,7 +75,7 @@ def loopList(tickerList):
     return resultList
 
 # change txt file
-myNames = getListFromTxtFile('/Users/brayden/Desktop/shield_citi/backend/misc/techSplitter.txt')        
+myNames = getListFromTxtFile('techSplitter.txt')        
 print(loopList(myNames))
 
 

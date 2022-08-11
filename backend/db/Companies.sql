@@ -10,13 +10,13 @@ SET time_zone = "+08:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
-DROP DATABASE IF EXISTS `equity`;
-CREATE DATABASE `equity`;
-USE `equity`;
-CREATE TABLE `equity` (
+DROP DATABASE IF EXISTS `COMPANIES`;
+CREATE DATABASE `COMPANIES`;
+USE `COMPANIES`;
+CREATE TABLE `COMPANIES` (
   `ticker` varchar(50) NOT NULL,
   `name` varchar(120) NOT NULL,
-  `industry` varchar(120) NULL,
+  `industry` varchar(120) NOT NULL,
   `price` float DEFAULT NULL,
   `total` float DEFAULT NULL,
   `env` float DEFAULT NULL,
@@ -26,10 +26,10 @@ CREATE TABLE `equity` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO `equity` (`ticker`, `name`) VALUES
-('LUV', 'Southwest Airlines Co.'),
-('AAPL', 'Apple Inc.'),
-('GOOGL', 'Alphabet Inc.');
+INSERT INTO `COMPANIES` (`ticker`, `name`, `industry`, `price`, `total`, `env`, `soc`, `gov`) VALUES
+('LUV', 'Southwest Airlines Co.', 'Airlines', '38.34', '32', '11.3', '14.9', '6.2'),
+('AAPL', 'Apple Inc.', 'Technology', '164.92', '16', '0.6', '6.9', '8.9'),
+('GOOGL', 'Alphabet Inc.', 'Technology', '116.63', '1.7', '11.1', '11.5');
 
 
 COMMIT;
