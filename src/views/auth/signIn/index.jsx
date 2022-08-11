@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 // Chakra imports
 import {
@@ -15,6 +15,8 @@ import {
   InputRightElement,
   Text,
   useColorModeValue,
+  Alert,
+  AlertIcon
 } from "@chakra-ui/react";
 // Custom components
 import { HSeparator } from "components/separator/Separator";
@@ -31,22 +33,49 @@ function SignIn() {
   const textColorDetails = useColorModeValue("navy.700", "secondaryGray.600");
   const textColorBrand = useColorModeValue("brand.500", "white");
   const brandStars = useColorModeValue("brand.500", "brand.400");
-  const googleBg = useColorModeValue("secondaryGray.300", "whiteAlpha.200");
-  const googleText = useColorModeValue("navy.700", "white");
-  const googleHover = useColorModeValue(
-    { bg: "gray.200" },
-    { bg: "whiteAlpha.300" }
-  );
-  const googleActive = useColorModeValue(
-    { bg: "secondaryGray.300" },
-    { bg: "whiteAlpha.200" }
-  );
+  const [isWrongPassword, setIsWrongPassword] = useState(false);
+  const [isMissingInput, setIsMissingInput] = useState(false);
+  let errorComponent = null;
+
+  if (isWrongPassword) {
+    errorComponent =  <Alert mb = '2rem' status='error'>
+                          <AlertIcon />
+                          Your userid and/or password is wrong.
+                        </Alert> 
+  } else if (isMissingInput) {
+    errorComponent =  <Alert  mb = '2rem' status='error'>
+                          <AlertIcon />
+                          There are missing fields
+                        </Alert> 
+  }
+
+
+  const demoAccount = {
+    "id": "1",
+    "userid": "demo",
+    "password": "1234"
+  }
+
   const [show, setShow] = React.useState(false);
   const [SignIn, setSignIn] = useState({
     "userid": "",
     "password": "",
-})
+  })
   const handleClick = () => setShow(!show);
+  console.log(SignIn)
+  const handleSignIn = (e) => {
+    if (SignIn.userid === demoAccount.userid && SignIn.password === demoAccount.password) {
+      alert("Successfully signed in!");
+    } else {
+      if (SignIn.userid === "" || SignIn.password === "") {
+        setIsMissingInput(true);
+        setIsWrongPassword(false);
+      } else {
+        setIsMissingInput(false);
+        setIsWrongPassword(true);
+      }
+    }
+  }
 
   return (
     <DefaultAuth illustrationBackground={illustration} image={illustration}>
@@ -75,6 +104,8 @@ function SignIn() {
             Enter your email and password to sign in!
           </Text>
         </Box>
+        {errorComponent}
+
         <Flex
           zIndex='2'
           direction='column'
@@ -85,29 +116,6 @@ function SignIn() {
           mx={{ base: "auto", lg: "unset" }}
           me='auto'
           mb={{ base: "20px", md: "auto" }}>
-          <Button
-            fontSize='sm'
-            me='0px'
-            mb='26px'
-            py='15px'
-            h='50px'
-            borderRadius='16px'
-            bg={googleBg}
-            color={googleText}
-            fontWeight='500'
-            _hover={googleHover}
-            _active={googleActive}
-            _focus={googleActive}>
-            <Icon as={FcGoogle} w='20px' h='20px' me='10px' />
-            Sign in with Google
-          </Button>
-          <Flex align='center' mb='25px'>
-            <HSeparator />
-            <Text color='gray.400' mx='14px'>
-              or
-            </Text>
-            <HSeparator />
-          </Flex>
           <FormControl>
             <FormLabel
               display='flex'
@@ -128,7 +136,7 @@ function SignIn() {
               mb='24px'
               fontWeight='500'
               size='lg'
-              onChange={(e) => setSignIn({...SignIn, "userid": e.target.value})}
+              onChange={(e) => setSignIn({ ...SignIn, "userid": e.target.value })}
             />
             <FormLabel
               ms='4px'
@@ -147,7 +155,7 @@ function SignIn() {
                 size='lg'
                 type={show ? "text" : "password"}
                 variant='auth'
-                onChange={(e) => setSignIn({...SignIn, "password": e.target.value})}
+                onChange={(e) => setSignIn({ ...SignIn, "password": e.target.value })}
               />
               <InputRightElement display='flex' alignItems='center' mt='4px'>
                 <Icon
@@ -191,8 +199,8 @@ function SignIn() {
               w='100%'
               h='50'
               mb='24px'
-              // onClick={login}
-              >
+              onClick={handleSignIn}
+            >
               Sign In
             </Button>
           </FormControl>

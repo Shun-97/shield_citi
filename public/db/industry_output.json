@@ -1,0 +1,35 @@
+[
+    {
+      "env": 0.65,
+      "gov": 8.9,
+      "industry": "Technology",
+      "name": "Apple Inc.",
+      "price": 164.92,
+      "soc": 6.86,
+      "ticker": "AAPL",
+      "total": 16.41,
+      "profileScore": 36.3
+    },
+    {
+      "env": 1.66,
+      "gov": 11.54,
+      "industry": "Technology",
+      "name": "Alphabet Inc.",
+      "price": 116.63,
+      "soc": 11.12,
+      "ticker": "GOOGL",
+      "total": 24.32,
+      "profileScore": 20.3
+    },
+    {
+      "env": 11.29,
+      "gov": 6.21,
+      "industry": "OilAndGas",
+      "name": "Southwest Airlines Co.",
+      "price": 38.34,
+      "soc": 14.89,
+      "ticker": "LUV",
+      "total": 32.39,
+      "profileScore": 10.4
+    }
+  ]

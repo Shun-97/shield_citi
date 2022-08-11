@@ -237,8 +237,8 @@ export default function UserReports() {
                 </div>
                 
             </SimpleGrid>
-            <Card>
-                <Image src={`/reportImage/${imageURL}`}></Image>
+            <Card w = '40rem' my = '3rem' mx = 'auto'>
+                <Image src={`/reportImage/${imageURL}`} mx='auto' h = '30rem'></Image>
                 <Button my='2rem' mx ='auto' size='lg' leftIcon={<MdManageSearch />} colorScheme='purple'>Show my recommendation</Button>
             </Card>
             
