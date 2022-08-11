@@ -64,7 +64,6 @@ export default function UserReports() {
             },
             body: JSON.stringify(
                 qnAnswer
-
             )
         }).then(res => res.json())
             .then(data => {
@@ -84,39 +83,39 @@ export default function UserReports() {
 
     const [qnAnswer, setQnAnswer] = React.useState([{
         "Question_number": 1,
-        "Info": []
+        "Info": ["S",1]
     }
         , {
         "Question_number": 2,
-        "Info": []
+        "Info": ["S",1]
     }
         , {
         "Question_number": 3,
-        "Info": []
+        "Info": ["E",3]
     },
     {
         "Question_number": 4,
-        "Info": []
+        "Info": ["G",1]
     },
     {
         "Question_number": 5,
-        "Info": []
+        "Info": ["E",3]
     },
     {
         "Question_number": 6,
-        "Info": []
+        "Info": ["S",1]
     },
     {
         "Question_number": 7,
-        "Info": []
+        "Info": ["G",1]
     },
     {
         "Question_number": 8,
-        "Info": []
+        "Info": ["E",3]
     },
     {
         "Question_number": 9,
-        "Info": []
+        "Info": ["G",1]
     }])
 
     useEffect(() => {
