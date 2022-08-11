@@ -70,6 +70,8 @@ class NewCustIndustryPreferred(db.Model):
     def json(self):
         return {"cid" : self.cid, "preferred_industry" : self.preferred_industry}
 
+# get custimer by customer id
+
 
 @app.route("/calculateRiskAppetite", methods=['POST', 'GET'])
 def calculate_Risk_Appetite():
@@ -174,7 +176,7 @@ def get_customer_portfolio_by_cid(cid):
     ), 404
 
 @app.route("/customer")
-def get_all_customer_portfolio():
+def get_all_customer():
     try:
         customerList = NewCustKyc.query.all()
         if len(customerList):
@@ -193,6 +195,27 @@ def get_all_customer_portfolio():
                 "message": "There are no customers."
             }
         ), 404
+
+@app.route("/customer/<int:cid>")
+def get_customer_by_cid(cid):
+    try:
+        customerList = NewCustKyc.query.filter_by(cid=cid).first()
+        
+        if customerList:
+            return jsonify(
+                {
+                    "code": 200,
+                    "data": customerList.json()
+                }
+        )
+
+    except:
+        return jsonify(
+            {
+                "code": 404,
+                "message": "Customer with CID " + str(cid) + " is not found."
+            }
+    ), 404
 
 
 @app.route("/custIndustryPreferred")
