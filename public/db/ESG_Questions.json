@@ -2,18 +2,48 @@
     {
         "Question_number": 1,
         "Question": "How much do you value enthic representation and diversity in a workplace?",
-        "Choices": ["Not necessary at all.", "Good to have, but not a necessity. ","Important, but not a deal breaker.","Highly important for a workplace."]
+        "Choices": [["Not necessary at all.","S",0], ["Good to have, but not a necessity.","S",1],["Important, but not a deal breaker.","S",2],["Highly important for a workplace.","S",3]]
     }
     ,{
         "Question_number": 2,
         "Question": "What kind of investor would you categorise yourself as?",
-        "Choices" : ["Returns above all else.", "While I view both returns and ethicality as high importance, I would value returns more than ethicality.", "While I view both returns and ethicality as high importance, I would value ethicality more than returns.", "I believe in investing in companies whose values and mission aligns with mine."]
+        "Choices" : [["Returns above all else.","S",0], ["While I view both returns and ethicality as high importance, I would value returns more than ethicality.","S",1], ["While I view both returns and ethicality as high importance, I would value ethicality more than returns.","S",2], ["I believe in investing in companies whose values and mission aligns with mine.","S",3]]
     }
     ,{
         "Question_number": 3,
         "Question": "What do you think is the best way to combat climate change?",
-        "Choices": ["Large corporations and the affluent taking responsibility.", "It should be everyone’s responsibility.", "Responsibility should start from myself as well as influencing those around me to do the same."]
+        "Choices": [["Large corporations and the affluent taking responsibility.","E",1], ["It should be everyone’s responsibility.","E",2], ["Responsibility should start from myself as well as influencing those around me to do the same.","E",3]]
     }
-      
+    ,{
+        "Question_number": 4,
+        "Question": "For an organisation to undergo a drastic overhaul, who do you think will be the biggest factor in enacting this change?",
+        "Choices": [["The founder of the company.","G",1], ["The C-suite executives.","G",2], ["The employees.","G",3]]
+    }  
+    ,{
+        "Question_number": 5,
+        "Question": "How much more cost are you willing to incur in an attempt to produce less carbon footprint in your lifestyle?",
+        "Choices": [["I am not willing to pay any additional amount.","E",0], ["I am willing to incur an increase of less than 15% to my expenditure to opt for eco-friendly options.","E",1], ["I am willing to incur an increase of between 15-30% to my expenditure to opt for eco-friendly options.","E",2],["I am willing to incur an increase of above 30% to my expenditure to opt for eco-friendly options.","E",3]]
+    }  
+    ,{
+        "Question_number": 6,
+        "Question": "How much of a company’s success would you attribute to employees(Not including managers and C-suite executives)?",
+        "Choices": [["More than 70%","S",3], ["Between 30%-70%","S",2], ["Lower than 30%","S",1]]
+    } 
+    ,{
+        "Question_number": 7,
+        "Question": "Which of the following best suits your thoughts on Whistleblower schemes and anonymous helplines in a company?",
+        "Choices": [["I feel they are highly valuable and should be in every corporation.","G",3], ["While I feel that they are important, I don’t think it should be in every company.","G",2],["I feel that they are good to have, but I would rather allocate the effort and manpower into other areas","G",1], ["They are not important.","G",0]]
+    } 
+    ,{
+        "Question_number": 8,
+        "Question": "Which of the following best suits your thoughts on green energy initiatives and efficient energy usage within a company?",        
+        "Choices": [["I feel they are highly valuable and should be in every corporation.","E",3], ["While I feel that they are important, I don’t think it should be in every company.","E",2],["I feel that they are good to have, but I would rather allocate the effort and manpower into other areas","E",1], ["They are not important.","E",0]]        
+    } 
+    ,{
+        "Question_number": 9,
+        "Question": "How much of a company’s resources should be used to mitigate bribery and corruption? Assume that the higher ups of the company have a clean record thus far.",
+        "Choices": [["Less than 15%","G",1], ["Between 15%-40%","G",2], ["Above 40%","G",3]]
+    } 
+    
 ]
   

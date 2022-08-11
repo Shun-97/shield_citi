@@ -1,0 +1,40 @@
+[
+    {
+        "Question_number": 1,
+        "Info": ["S",0]
+    }
+    ,{
+        "Question_number": 2,
+        "Info": ["E",2]
+    }
+    ,{
+        "Question_number": 3,
+        "Info": ["G", 2]
+    },
+    {
+        "Question_number": 4,
+        "Info": ["G", 2]
+    },
+    {
+        "Question_number": 5,
+        "Info": ["E", 2]
+    },
+    {
+        "Question_number": 6,
+        "Info": ["S", 2]
+    },
+    {
+        "Question_number": 7,
+        "Info": ["E", 3]
+    },
+    {
+        "Question_number": 8,
+        "Info": ["S", 2]
+    },
+    {
+        "Question_number": 9,
+        "Info": ["G", 0]
+    }
+      
+]
+  

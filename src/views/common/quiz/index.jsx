@@ -33,14 +33,16 @@ export default function UserReports() {
     const [cardDetail, setCardDetail] = React.useState([]);
     const [AllQn, setAllQn] = React.useState([{ "Question": "", "Question_number": "", "Choices": [] }]);
     const [CurrentQn, setCurrentQn] = React.useState(0);
-        // data = undefin <-
-        // data = [{}]
-        // assignment is fixed, use state is not
-        // AllQn = undefin
+    const [CurrentselectedChoice, setSelectedChoice] = React.useState(0);
     const changeQn = (ESG_Question_text) => {
         setCurrentQn(ESG_Question_text)
+        setSelectedChoice(20)
     }
-    const quesCount = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const changeSelectedChoice = (selectedChoice) => {
+        setSelectedChoice(selectedChoice)
+    }
+    const quesCount = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    const mcq = ["A", "B", "C", "D", "E", "F"]
 
     useEffect(() => {
         fetch("/db/ESG_Questions.json", {
@@ -81,9 +83,8 @@ export default function UserReports() {
                                     if (CurrentQn+1 === number) {
                                         circleComponent = <Circle  key = {key} size='40px' bg='blue' color='white'>{number}</Circle>
                                     }
-                                    
                                     return (
-                                        <div onClick={() => changeQn(number - 1)}>
+                                        <div onClick={() => changeQn(number - 1) & changeSelectedChoice(0)}>
                                             {circleComponent}
                                         </div>
                                     )
@@ -104,8 +105,25 @@ export default function UserReports() {
                         color={textColorSecondary} fontSize='xl' mx='2rem' my='0.5rem'>
                         {`${AllQn[CurrentQn].Question}`}
                     </Text>
+                    <HStack>
+                            {
+                                AllQn[CurrentQn].Choices.map((choice, key) => {
+                                    console.log(CurrentselectedChoice)
+                                    let circleComponent = <Circle key = {key} size='40px' bg='#dfe7e3' color="white">{mcq[key]}</Circle> 
+                                    if (CurrentselectedChoice === key) {
+                                        circleComponent = <Circle  key = {key} size='40px'  bg="#b3b9b6" color='white'>{mcq[key]}</Circle>
+                                    }
+                                    return (
+                                        <div onClick={() => changeSelectedChoice(key)}>
+                                            {circleComponent}
+                                            {choice[0]} <br></br>
+                                        </div>
+                                        
+                                    )
 
-                    {/* {Choices.map()} */}
+                                })
+                            }
+                        </HStack>
                 </Flex>
             </Card>
 
