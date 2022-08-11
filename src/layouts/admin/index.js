@@ -162,6 +162,7 @@ export default function Dashboard(props) {
               <Switch>
                 {getRoutes(routes)}
                 <Route path={`/admin/KYCquiz`} component={KYCquiz} />
+                <Redirect from='/admin' to='/auth/sign-in' />
               </Switch>
             </Box>
           ) : null}

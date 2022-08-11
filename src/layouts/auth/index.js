@@ -7,6 +7,8 @@ import { Box, useColorModeValue } from "@chakra-ui/react";
 
 // Layout components
 import { SidebarContext } from "contexts/SidebarContext";
+import SignUp from "views/auth/signup";
+
 
 // Custom Chakra theme
 export default function Auth() {
@@ -61,10 +63,13 @@ export default function Auth() {
             <Box mx='auto' minH='100vh'>
               <Switch>
                 {getRoutes(routes)}
-                {/* <Redirect
-                  from='/auth'
-                  to='/auth/sign-in/default
-                  '
+                <Route
+                  path={"/auth/sign-up"}
+                  component={SignUp}
+                />
+                {/* <Route
+                  path={"/auth/forgot-password"}
+                  component={SpecificCourse}
                 /> */}
               </Switch>
             </Box>
