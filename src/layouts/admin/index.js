@@ -11,7 +11,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import routes from "./routes.js";
 
 // views imports
-
+import KYCquiz from "views/common/KYCQuiz"
 
 
 // Custom Chakra theme
@@ -161,7 +161,7 @@ export default function Dashboard(props) {
               pt='50px'>
               <Switch>
                 {getRoutes(routes)}
-                
+                <Route path={`/admin/KYCquiz`} component={KYCquiz} />
               </Switch>
             </Box>
           ) : null}

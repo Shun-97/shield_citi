@@ -45,7 +45,7 @@
     {
         "Question_number": 9,
         "Question": "Which of the following industry are you most interested in? Select 3 only.",
-        "Choices": ["Tech", "Finance","Utilities", "Healthcare","Energy"]
+        "Choices": [["Tech",1], ["Finance",1],["Utilities",1], ["Healthcare",1],["Energy",1]]
     }    
 ]
   

@@ -36,13 +36,63 @@ export default function UserReports() {
     const [CurrentselectedChoice, setSelectedChoice] = React.useState(0);
     const changeQn = (ESG_Question_text) => {
         setCurrentQn(ESG_Question_text)
-        setSelectedChoice(20)
     }
-    const changeSelectedChoice = (selectedChoice) => {
+    const changeSelectedChoice = (selectedChoice, currentQn) => {
         setSelectedChoice(selectedChoice)
     }
     const quesCount = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     const mcq = ["A", "B", "C", "D", "E", "F"]
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log('You clicked submit.');
+        console.log(qnAnswer)
+    }
+
+    const storeChoice = (value,currentQn) => {
+        // console.log(value)
+        // console.log(currentQn)
+        let qnArray = qnAnswer
+        qnArray[currentQn]['Info'] = [value[1], value[2]];
+        setQnAnswer(qnArray)
+    }
+
+
+    const [qnAnswer, setQnAnswer] = React.useState([{
+        "Question_number": 1,
+        "Info": []
+    }
+        , {
+        "Question_number": 2,
+        "Info": []
+    }
+        , {
+        "Question_number": 3,
+        "Info": []
+    },
+    {
+        "Question_number": 4,
+        "Info": []
+    },
+    {
+        "Question_number": 5,
+        "Info": []
+    },
+    {
+        "Question_number": 6,
+        "Info": []
+    },
+    {
+        "Question_number": 7,
+        "Info": []
+    },
+    {
+        "Question_number": 8,
+        "Info": []
+    },
+    {
+        "Question_number": 9,
+        "Info": []
+    }])
 
     useEffect(() => {
         fetch("/db/ESG_Questions.json", {
@@ -57,7 +107,7 @@ export default function UserReports() {
                 console.log(data)
             });
 
-        fetch("/db/Quiz.json", {
+        fetch("/db/ESGQuiz.json", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -76,22 +126,21 @@ export default function UserReports() {
                 my='1rem'
                 mx='2rem'>
                 <Flex direction='column'  >
-                        <HStack mx = 'auto' justifyContent= "center" >
-                            {
-                                quesCount.map((number, key) => {
-                                    let circleComponent = <Circle key = {key} size='40px' color='black'>{number}</Circle>
-                                    if (CurrentQn+1 === number) {
-                                        circleComponent = <Circle  key = {key} size='40px' bg='blue' color='white'>{number}</Circle>
-                                    }
-                                    return (
-                                        <div onClick={() => changeQn(number - 1) & changeSelectedChoice(0)}>
-                                            {circleComponent}
-                                        </div>
-                                    )
-
-                                })
-                            }
-                        </HStack>
+                    <HStack mx='auto' justifyContent="center" >
+                        {
+                            quesCount.map((number, key) => {
+                                let circleComponent = <Circle key={key} size='40px' color='black'>{number}</Circle>
+                                if (CurrentQn + 1 === number) {
+                                    circleComponent = <Circle key={key} size='40px' bg='blue' color='white'>{number}</Circle>
+                                }
+                                return (
+                                    <div onClick={() => changeQn(number - 1) & changeSelectedChoice(0)}>
+                                        {circleComponent}
+                                    </div>
+                                )
+                            })
+                        }
+                    </HStack>
                     <Text
                         color={textColorPrimary}
                         fontWeight='bold'
@@ -106,24 +155,30 @@ export default function UserReports() {
                         {`${AllQn[CurrentQn].Question}`}
                     </Text>
                     <HStack>
-                            {
-                                AllQn[CurrentQn].Choices.map((choice, key) => {
-                                    console.log(CurrentselectedChoice)
-                                    let circleComponent = <Circle key = {key} size='40px' bg='#dfe7e3' color="white">{mcq[key]}</Circle> 
-                                    if (CurrentselectedChoice === key) {
-                                        circleComponent = <Circle  key = {key} size='40px'  bg="#b3b9b6" color='white'>{mcq[key]}</Circle>
-                                    }
-                                    return (
-                                        <div onClick={() => changeSelectedChoice(key)}>
-                                            {circleComponent}
-                                            {choice[0]} <br></br>
-                                        </div>
-                                        
-                                    )
+                        {
+                            AllQn[CurrentQn].Choices.map((choice, key) => {
+                                // console.log(CurrentselectedChoice)
+                                let circleComponent = <Circle key={key} size='40px' bg='#dfe7e3' color="white"onClick= {(e) => storeChoice(choice,CurrentQn)} >{mcq[key]}</Circle>
+                                if (CurrentselectedChoice === key) {
+                                    circleComponent = <Circle key={key} size='40px' bg="#b3b9b6" color='white' onClick= {(e) => storeChoice(choice,CurrentQn)}>{mcq[key]}</Circle>
+                                }
+                                return (
+                                    <div onClick={() => changeSelectedChoice(key)}>
+                                        {circleComponent}
+                                        {choice[0]}
+                                    </div>
 
-                                })
-                            }
-                        </HStack>
+                                )
+
+                            })
+                        }
+                    </HStack>
+
+                </Flex>
+                <Flex color={textColorSecondary} fontSize='xl' mx='auto' float="left" my='5rem' bg="#b3b9b6" color="" display="flex">
+                    <form onSubmit={handleSubmit}>
+                        <button type="submit"> Submit Quiz </button>
+                    </form>
                 </Flex>
             </Card>
 

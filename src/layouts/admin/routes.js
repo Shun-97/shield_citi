@@ -19,6 +19,7 @@ import SignInCentered from "views/auth/signIn";
 // Common import
 import Home from "views/common/home";
 import Quiz from "views/common/quiz";
+// import Quiz from "views/common/quiz";
 import Report from "views/common/report";
 
 const routes = [
@@ -37,12 +38,19 @@ const routes = [
     component: DataTables,
   },
   {
-    name: "Personality Quiz",
+    name: "ESG Quiz",
     layout: "/admin",
     icon: <Icon as={MdOutlineQuiz} width='20px' height='20px' color='inherit' />,
     path: "/quiz",
     component: Quiz,
   },
+  // {
+  //   name: "KYC Quiz",
+  //   layout: "/admin",
+  //   icon: <Icon as={MdOutlineQuiz} width='20px' height='20px' color='inherit' />,
+  //   path: "/KYCquiz",
+  //   component: Quiz,
+  // },
   {
     name: "Report",
     layout: "/admin",
