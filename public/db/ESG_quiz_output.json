@@ -1,0 +1,27 @@
+[
+    {
+        "Question_number": 1,
+        "Selected": 5,
+        "Max": 6
+    }
+    ,{
+        "Question_number": 2,
+        "Selected": 4,
+        "Max": 4
+    }
+    ,{
+        "Question_number": 3,
+        "Selected": 2,
+        "Max": 4
+    },
+    {
+        "Question_number": 4,
+        "Selected": 3,
+        "Max": 3
+    },
+    {
+        "Question_number": 5,
+        "Selected": ["Tech","Finance","Healthcare"]
+    }
+]
+  

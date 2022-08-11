@@ -1,0 +1,19 @@
+[
+    {
+        "CardHeader": "",
+        "CardBody": {
+            "__html": ""
+            },
+        "Position": "Left"
+    }
+    ,{
+        "CardHeader": "Q1",
+        "CardBody": {
+            "__html": "I plan to begin withdrawing money from my investments in . . . <select> <option value='grapefruit'>Grapefruit</option> <option value='lime'>Lime</option> <option selected value='coconut'>Coconut</option> <option value='mang'>Mango</option> </select>"
+            },
+        "ImageHeight": "10rem",
+        "ImageWidth": "auto",
+        "Position": "Center"
+    }
+    
+]

@@ -1,0 +1,51 @@
+[
+    {
+        "Question_number": 1,
+        "Question": "I plan to begin withdrawing money from my investments in . . .",
+        "Choices": [["More than 15 years", 1,6], [" 11-15 years",2,6],["6-10 years",3,6],["3-5 years 3",4,6],["1-2 years", 5,6],["Less than 1 year",6,6]]        
+    },
+    {
+        "Question_number": 2,
+        "Question": "As I withdraw money, I plan to spend it over a period of . . .",
+        "Choices": [["More than 15 years", 1,6], [" 11-15 years",2,6],["6-10 years",3,6],["3-5 years 3",4,6],["1-2 years", 5,6],["Less than 1 year",6,6]]
+    }
+    ,
+    {
+        "Question_number": 3,
+        "Question": "You are on a TV game show and can choose one of the following. Which would you take?",
+        "Choices": [["A 5% chance at winning $100,000 ", 4,4], ["A 25% chance at winning $10,000 ",3,4],["A 50% chance at winning $5,000 ",2,4],["$1,000 in cash ", 1,4]]
+    }
+    ,
+    {
+        "Question_number": 4,
+        "Question": "When it comes to investing in stock or bond mutual funds (or individual stocks or bonds), I would describe myself as . . .",
+        "Choices": [["Very experienced", 1,5], ["Experienced",2,5],["Somewhat experienced",3,5],["Somewhat inexperienced",4,5],["Very inexperienced", 5,5]]
+    }
+    ,
+    {
+        "Question_number": 5,
+        "Question": " When you think of the word “risk” , which of the following words comes to mind first?",
+        "Choices": [["Loss", 1,4], ["Uncertainty ",2,4],["Opportunity ",3,4],["Thrill",4,4]]
+    },
+    {
+        "Question_number": 6,
+        "Question": "Your best friend says his grandfather will give you a chance to invest in a gold property in northern British Columbia. He says the investment will double before the end of the year. What do you do?",
+        "Choices": [["Drain your savings to buy as many shares as possible.", 4,4],["Get information about the company. If there’s potential, invest $5,000.",3,4],["Invest $1,000, an amount you can afford to write off.",2,4],["Weigh the risks and decide not to invest.",1,4]]
+    },
+    {
+        "Question_number": 7,
+        "Question": "A stock you bought over a year ago has suddenly increased in value by over 40%. What do you do?",
+        "Choices": [["Sell, and move your cash to a low-risk investment.", 1,3], ["Consider selling enough to cover your original investment.",2,3],["Borrow money to buy more stock.",3,3]]
+    },
+    {
+        "Question_number": 8,
+        "Question": "Your boss is going to pay a year-end bonus and gives you a choice between $500 cash or $600 in company stock. You can’t sell the stock for at least 12 months, and in that time the stock price could go up or down. What do you do?",
+        "Choices": [["Take the money while you can.",1,2],["Take the stock, because you believe in your company’s potential.",2,2]]
+    },
+    {
+        "Question_number": 9,
+        "Question": "Which of the following industry are you most interested in? Select 3 only.",
+        "Choices": [["Tech",1], ["Finance",1],["Utilities",1], ["Healthcare",1],["Energy",1]]
+    }    
+]
+  
