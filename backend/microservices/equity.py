@@ -1,4 +1,5 @@
 from locale import currency
+from operator import eq
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import and_, or_
@@ -230,19 +231,30 @@ def retrieveTickers():
     
 
 
-@app.route("/", methods=['GET'])
+@app.route("/indexedEquity", methods=['GET'])
 def getAll3():
 
-    equityList = []
+    indexedEquity = {}
 
     equityList = Equity.query.all()
+
+    for equity in equityList:
+        # print(equity)
+        # equity = json.dumps(equity)
+        equityDict = json.loads(json.dumps(equity.json()))
+
+        # print(equityDict)
+        ticker = equityDict['ticker']
+        indexedEquity[ticker] = equityDict
+    
+
 
     if (equityList):
         return jsonify(
             {
                 "code": 200,
                 "data": {
-                    "equity": [equity.json() for equity in equityList]
+                    "equity": indexedEquity
                 }
             }
         )

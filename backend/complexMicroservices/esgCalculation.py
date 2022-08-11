@@ -26,6 +26,79 @@ CUSTOMER_URL = "http://localhost:5003/"
 EQUITY_URL = "http://localhost:5006/"
 ESG_PROFILING_URL = "http://localhost:5004/"
 
+
+@app.route("/scoring", methods=['POST'])
+def scoring():
+    if request.is_json:
+        # try:
+        data = request.get_json()
+        cid = data['cid']
+        print("\nReceived customer ID in JSON:", cid)
+        result = processScoring(cid)
+        return jsonify(
+            {
+                "code": 200,
+                "data": {
+                    "equity": result
+                }
+            }
+        ), 200
+
+def processScoring(cid):
+    response1 = invoke_http(ESG_PROFILING_URL + "EsgScore/"+str(cid), method='GET')
+    env = response1['data']['env']
+    soc = response1['data']['soc']
+    gov = response1['data']['gov']
+
+    response2 = invoke_http(method='GET', url=EQUITY_URL + "indexedEquity")
+    equityJson = response2['data']['equity']
+    print("*****")
+    print(type(equityJson))
+
+
+
+    response3 = invoke_http(method='GET', url= CUSTOMER_URL+ "CustomerPortfolio/"+ str(cid))
+    positionList = response3['data']
+
+    tabulationDict = {}
+    totalValue = 0
+
+    for position in positionList:
+        position = json.dumps(position)
+        positionDict = json.loads(position)
+        ticker = positionDict['ticker']
+
+        equity = equityJson[ticker]
+        equity = json.dumps(equity)
+        equityDict = json.loads(equity)
+
+        valueOfPosition = positionDict["qty"] * equityDict["price"]
+        profileEnvScore = (env) * equityDict['env'] / 100 * 3
+        profileSocScore = (soc) * equityDict['soc'] / 100 * 3
+        profileGovScore = (gov) * equityDict['gov'] / 100 * 3
+
+        totalValue += valueOfPosition
+        tabulationDict[ticker] = {"env": profileEnvScore, "soc": profileSocScore, "gov": profileGovScore, "valueOfPosition": valueOfPosition}
+    
+    print(tabulationDict)
+    outputEnv = 0
+    outputSoc = 0
+    outputGov = 0
+
+    for position in tabulationDict:
+        outputEnv += tabulationDict[ticker]["env"] * ((tabulationDict[ticker]["valueOfPosition"])/totalValue)
+        outputSoc += tabulationDict[ticker]["soc"] * ((tabulationDict[ticker]["valueOfPosition"])/totalValue) 
+        outputGov += tabulationDict[ticker]["gov"] * ((tabulationDict[ticker]["valueOfPosition"])/totalValue) 
+
+    
+    total = outputEnv+outputGov+outputSoc
+    
+    return {    "env": round(outputEnv, 2),
+                "soc": round(outputSoc, 2),
+                "gov": round(outputGov, 2),
+                "total": total
+            }
+
 @app.route("/recommendations", methods=['POST'])
 def recommendations():
 
@@ -58,11 +131,9 @@ def processRecommendation(cid):
     result = []
 
     for equity in equityList:
-        print(equity)
+        # print(equity)
         equity = json.dumps(equity)
         equityDict = json.loads(equity)
-        print(env)
-        print(equityDict['env'])
         equityDict['profileScore'] = round(((env/100) * equityDict['env'] + (soc/100) * equityDict['soc'] + (gov/100) * equityDict['gov']) * 3, 2) 
         result.append(equityDict)
     
