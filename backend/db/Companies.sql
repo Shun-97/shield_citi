@@ -1,0 +1,39 @@
+
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+08:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+DROP DATABASE IF EXISTS `COMPANIES`;
+CREATE DATABASE `COMPANIES`;
+USE `COMPANIES`;
+CREATE TABLE `COMPANIES` (
+  `ticker` varchar(50) NOT NULL,
+  `name` varchar(120) NOT NULL,
+  `industry` varchar(120) NOT NULL,
+  `price` float DEFAULT NULL,
+  `total` float DEFAULT NULL,
+  `env` float DEFAULT NULL,
+  `soc` float DEFAULT NULL,
+  `gov` float DEFAULT NULL,
+  PRIMARY KEY (ticker)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+INSERT INTO `COMPANIES` (`ticker`, `name`, `industry`, `price`, `total`, `env`, `soc`, `gov`) VALUES
+('LUV', 'Southwest Airlines Co.', 'Airlines', '38.34', '32', '11.3', '14.9', '6.2'),
+('AAPL', 'Apple Inc.', 'Technology', '164.92', '16', '0.6', '6.9', '8.9'),
+('GOOGL', 'Alphabet Inc.', 'Technology', '116.63', "24" ,'1.7', '11.1', '11.5',);
+
+
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
