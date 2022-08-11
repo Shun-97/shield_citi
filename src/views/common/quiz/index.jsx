@@ -7,8 +7,9 @@ import {
     Text,
     Image,
     Circle,
-    Square,
-    HStack
+    Spacer,
+    HStack,
+    VStack
 } from "@chakra-ui/react";
 
 // Assets
@@ -29,6 +30,9 @@ export default function UserReports() {
         "0px 18px 40px rgba(112, 144, 176, 0.12)",
         "unset"
     );
+
+    console.log(localStorage)
+
     let rowDirection = "row"
     const [cardDetail, setCardDetail] = React.useState([]);
     const [AllQn, setAllQn] = React.useState([{ "Question": "", "Question_number": "", "Choices": [] }]);
@@ -49,27 +53,27 @@ export default function UserReports() {
         submitQuiz(qnAnswer)
     }
 
-    const submitQuiz = () =>{
+    const submitQuiz = () => {
         console.log("now sending to BE")
         console.log(qnAnswer)
         fetch('http://localhost:5004/calculateEsgScore', {
             // mode: 'no-cors',
             method: 'POST',
-            headers:{
+            headers: {
                 'Content-Type': 'application/json'
             },
-            body:JSON.stringify(
-               qnAnswer
-            
+            body: JSON.stringify(
+                qnAnswer
+
             )
-        }).then(res=>res.json())
-        .then(data =>{
-            console.log(data)
-        })
+        }).then(res => res.json())
+            .then(data => {
+                console.log(data)
+            })
 
     }
 
-    const storeChoice = (value,currentQn) => {
+    const storeChoice = (value, currentQn) => {
         // console.log(value)
         // console.log(currentQn)
         let qnArray = qnAnswer
@@ -144,10 +148,11 @@ export default function UserReports() {
     return (
         <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
             <Card boxShadow={cardShadow}
+                width="70%"
                 my='1rem'
-                mx='2rem'>
+                mx='auto'>
                 <Flex direction='column'  >
-                    <HStack mx='auto' justifyContent="center" >
+                    <HStack mx='auto' my= '2rem' justifyContent="center" >
                         {
                             quesCount.map((number, key) => {
                                 let circleComponent = <Circle key={key} size='40px' color='black'>{number}</Circle>
@@ -162,41 +167,45 @@ export default function UserReports() {
                             })
                         }
                     </HStack>
-                    <Text
-                        color={textColorPrimary}
-                        fontWeight='bold'
-                        fontSize='3xl'
-                        my='0.5rem'
-                        mx='1rem'
-                    >
-                        {`Q${AllQn[CurrentQn].Question_number}`}
-                    </Text>
-                    <Text
-                        color={textColorSecondary} fontSize='xl' mx='2rem' my='0.5rem'>
-                        {`${AllQn[CurrentQn].Question}`}
-                    </Text>
-                    <HStack>
-                        {
-                            AllQn[CurrentQn].Choices.map((choice, key) => {
-                                // console.log(CurrentselectedChoice)
-                                let circleComponent = <Circle key={key} size='40px' bg='#dfe7e3' color="white"onClick= {(e) => storeChoice(choice,CurrentQn)} >{mcq[key]}</Circle>
-                                if (CurrentselectedChoice === key) {
-                                    circleComponent = <Circle key={key} size='40px' bg="#b3b9b6" color='white' onClick= {(e) => storeChoice(choice,CurrentQn)}>{mcq[key]}</Circle>
-                                }
-                                return (
-                                    <div onClick={() => changeSelectedChoice(key)}>
-                                        {circleComponent}
-                                        {choice[0]}
-                                    </div>
+                    <Flex my= '4rem' direction='row'>
+                        <Flex direction = 'column' w = '40%'>
+                            <Text
+                                color={textColorPrimary}
+                                fontWeight='bold'
+                                fontSize='3xl'
+                                my='0.5rem'
+                                mx='1rem'
+                            >
+                                {`Q${AllQn[CurrentQn].Question_number}`}
+                            </Text>
+                            <Text
+                                color={textColorSecondary} fontSize='xl' mx='2rem' my='0.5rem'>
+                                {`${AllQn[CurrentQn].Question}`}
+                            </Text>
+                        </Flex>
+                        <Spacer />
+                        <Flex direction = 'column' w = '40%' align-items="flex-start">
+                            {
+                                AllQn[CurrentQn].Choices.map((choice, key) => {
+                                    // console.log(CurrentselectedChoice)
+                                    let circleComponent = <Circle key={key} size='40px' bg='#dfe7e3' color="white" onClick={(e) => storeChoice(choice, CurrentQn)} >{mcq[key]}</Circle>
+                                    if (CurrentselectedChoice === key) {
+                                        circleComponent = <Circle key={key} size='40px' bg="#b3b9b6" color='white' onClick={(e) => storeChoice(choice, CurrentQn)}>{mcq[key]}</Circle>
+                                    }
+                                    return (
+                                        <div onClick={() => changeSelectedChoice(key)}>
+                                            {circleComponent}
+                                            {choice[0]}
+                                        </div>
 
-                                )
+                                    )
 
-                            })
-                        }
-                    </HStack>
-
+                                })
+                            }
+                        </Flex>
+                    </Flex>
                 </Flex>
-                <Flex color={textColorSecondary} fontSize='xl' mx='auto' float="left" my='5rem' bg="#b3b9b6" color="" display="flex">
+                <Flex color={textColorSecondary} fontSize='xl' mx='auto' float="left" my='5rem' bg="#b3b9b6" display="flex">
                     <form onSubmit={handleSubmit}>
                         <button type="submit"> Submit Quiz </button>
                     </form>

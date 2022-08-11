@@ -51,7 +51,8 @@ function SignUp() {
             There are missing fields
         </Alert>
     }
-
+    localStorage.setItem('role', 'newUser');
+    localStorage.setItem('id', 99);
     const [show, setShow] = React.useState(false);
     const [SignIn, setSignIn] = useState({
         "email": "",

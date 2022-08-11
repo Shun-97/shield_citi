@@ -33,7 +33,7 @@ import {
 // Custom components
 import Card from "components/card/Card.js";
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import MiniStatistics from "components/card/MiniStatistics";
 import IconBox from "components/icons/IconBox";
@@ -50,13 +50,20 @@ export default function UserReports() {
         "unset"
     );
     const [imageURL, setImageURL] = React.useState("1.png");
-    const [isExisting, setIsExisting] = React.useState(false);
+    const [isExisting, setIsExisting] = React.useState(localStorage.role === "existing");
     const changeView = (imageName) => {
         setImageURL(imageName)
     }
     const [ESG, setESG] = React.useState([]);
     const [portfilo, setPortfilo] = React.useState([]);
+    const [favoriteESG, setFavoriteESG] = useState("Environment");
+    const [treePng, setTreehugger] = useState("4.png");
+    const [peoplePng, setPeoplePng] = useState("5.png");
+    const [goverancePng, setGoverancePng] = useState("6.png");
 
+    
+
+    console.log(localStorage.role)
     useEffect(() => {
         fetch("http://localhost:5004/EsgScore/1", {
             method: "GET",
@@ -88,8 +95,7 @@ export default function UserReports() {
     }, []);
 
     useEffect(() => {
-        console.log(imageURL)
-        console.log('LOL')
+        setPeoplePng("2.png")
     }, [imageURL])
 
     return (
@@ -249,7 +255,7 @@ export default function UserReports() {
                 mx='auto'
                 maxW="600px"
                 mb='1rem'>
-                <div onClick={() => changeView("1.png")}>
+                <div onClick={() => changeView(treePng)}>
                     <MiniStatistics
                         startContent={
                             <IconBox
@@ -265,7 +271,7 @@ export default function UserReports() {
                         value='50%'
                     />
                 </div>
-                <div onClick={() => changeView("2.png")}>
+                <div onClick={() => changeView(peoplePng)}>
                     <MiniStatistics
                         startContent={
                             <IconBox
@@ -281,7 +287,7 @@ export default function UserReports() {
                         value='40%'
                     />
                 </div>
-                <div onClick={() => changeView("3.png")}>
+                <div onClick={() => changeView(goverancePng)}>
                     <MiniStatistics
                         startContent={
                             <IconBox

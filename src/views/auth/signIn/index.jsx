@@ -65,8 +65,8 @@ function SignIn() {
   console.log(SignIn)
   const handleSignIn = (e) => {
     if (SignIn.userid === demoAccount.userid && SignIn.password === demoAccount.password) {
-      localStorage.setItem('role', 'new');
-      localStorage.setItem('id', 99);
+      localStorage.setItem('role', 'existing');
+      localStorage.setItem('id', 1);
     } else {
       if (SignIn.userid === "" || SignIn.password === "") {
         setIsMissingInput(true);

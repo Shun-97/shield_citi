@@ -21,7 +21,7 @@ limiter = Limiter(
     default_limits=["2000 per day", "500 per hour"]
 )
 # app.config['SQLALCHEMY_DATABASE_URI'] = environ.get('dbURL') or 'mysql+mysqlconnector://root@localhost:3306/ESD5'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root@localhost/equity'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root@localhost/companies'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
@@ -31,7 +31,7 @@ CORS(app)
 
 
 class Equity(db.Model):
-    __tablename__ = 'equity'
+    __tablename__ = 'companies'
     ticker = db.Column(db.String(50), primary_key=True)
     name = db.Column(db.String(120), nullable=False)
     price = db.Column(db.Float, nullable=True)
