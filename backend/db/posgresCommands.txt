@@ -1,0 +1,5 @@
+steps 
+
+turn on docker daemon
+docker run --name citidbTest -p 5432:5432 -e POSTGRES_PASSWORD=treefker -d postgres
+docker run --rm -p 5050:5050 thajeztah/pgadmin4
