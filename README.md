@@ -14,6 +14,7 @@ Following the steps below from the prerequisites till the end of the installatio
 ### Prerequisites
 - Python 3.9 or later (https://www.python.org/downloads/)
 - WampServer (https://www.wampserver.com/en/)
+- Node.js (https://nodejs.org/en/download/)
 - Visual Studio Code (https://code.visualstudio.com/download)
 
 ### Setting up
