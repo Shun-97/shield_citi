@@ -61,5 +61,56 @@ def get_all():
         }
     ), 404
 
+@app.route("/calculateRiskAppetite", methods=['POST', 'GET'])
+def calculate_Risk_Appetite():
+
+    risk_appetite_score = 0
+    try:
+        data = request.get_json()
+        for i in range(0,len(data)-1):
+            risk_appetite_score += (data[i]["Selected"]/data[i]["Max"])
+        risk_appetite_percentage = (risk_appetite_score / (len(data)-1)) * 100
+        print(risk_appetite_score)
+        print("podsa")
+
+        if(risk_appetite_score):
+            print("yeet it works bro")
+            print(risk_appetite_percentage)
+
+            return jsonify(
+                {
+                    "code": 200,
+                    "data": {
+                        "riskAppetiteScore" : risk_appetite_percentage
+                    },
+                    "message": "Risk Appetite Score is tabulated"
+                }
+            ), 200
+
+    except Exception as e:
+        return jsonify(
+            {
+                "code": 500,
+                "data": {
+                    "riskAppetiteScore" : risk_appetite_percentage
+                },
+                "message": "Risk appetite score is not tabulated due to:  " + str(e)
+            }
+        ), 500
+
+        
+
+
+
+
+
 if __name__ == '__main__':
     app.run(port=5003, debug=True)
+
+# FE write JSON file and display the qn
+
+# need receive some json request from FE (need check the request from FE side) and add up the score and update the DB and send 200 OK if everything is good if not 500 or smth. 
+
+# json file receive from joel (array of objects) --> add up according to E,S,G (3 qn each max score 9 for each pillar) --> calculate percentage for E and S and to get G score, minus E and S from 100. If total is lesser than 100, round up G if total is more than 100 round down G.
+
+# risk appetite just send the final score 
