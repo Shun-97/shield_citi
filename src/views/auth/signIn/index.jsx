@@ -38,21 +38,21 @@ function SignIn() {
   let errorComponent = null;
 
   if (isWrongPassword) {
-    errorComponent =  <Alert mb = '2rem' status='error'>
-                          <AlertIcon />
-                          Your userid and/or password is wrong.
-                        </Alert> 
+    errorComponent = <Alert mb='2rem' status='error'>
+      <AlertIcon />
+      Your userid and/or password is wrong.
+    </Alert>
   } else if (isMissingInput) {
-    errorComponent =  <Alert  mb = '2rem' status='error'>
-                          <AlertIcon />
-                          There are missing fields
-                        </Alert> 
+    errorComponent = <Alert mb='2rem' status='error'>
+      <AlertIcon />
+      There are missing fields
+    </Alert>
   }
 
 
   const demoAccount = {
     "id": "1",
-    "userid": "demo",
+    "userid": "demo@gmail.com",
     "password": "1234"
   }
 
@@ -65,7 +65,8 @@ function SignIn() {
   console.log(SignIn)
   const handleSignIn = (e) => {
     if (SignIn.userid === demoAccount.userid && SignIn.password === demoAccount.password) {
-      alert("Successfully signed in!");
+      localStorage.setItem('role', 'new');
+      localStorage.setItem('id', 99);
     } else {
       if (SignIn.userid === "" || SignIn.password === "") {
         setIsMissingInput(true);
@@ -192,6 +193,7 @@ function SignIn() {
                 </Text>
               </NavLink>
             </Flex>
+            <NavLink to='/admin/KYCquiz'>
             <Button
               fontSize='sm'
               variant='brand'
@@ -203,6 +205,8 @@ function SignIn() {
             >
               Sign In
             </Button>
+            </NavLink>
+            
           </FormControl>
           <Flex
             flexDirection='column'
