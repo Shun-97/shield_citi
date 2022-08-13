@@ -17,6 +17,7 @@ import Quiz from "views/common/quiz";
 import Report from "views/common/report";
 import Recommendation from "views/common/recommendation";
 import KYCquiz from "views/common/KYCQuiz"
+import auth from "views/auth/signIn"
 
 const routes = [
   {
@@ -53,6 +54,12 @@ const routes = [
     path: "/recommendation",
     icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
     component: Recommendation,
+  }, {
+    name:'Sign Out',
+    layout: "/auth",
+    path:"/sign-in",
+    icon: <Icon as={MdPerson} width='20px' height='20px' color='inherit' />,
+    component: auth,
   }
 ];
 

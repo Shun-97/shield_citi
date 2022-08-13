@@ -100,6 +100,7 @@ function SignUp() {
                     mx={{ base: "auto", lg: "unset" }}
                     me='auto'
                     mb={{ base: "20px", md: "auto" }}>
+                    <Alert mb='2rem' status='info'><AlertIcon />Disclaimer: This is just a recommendation, please do your own due diligence before investing </Alert>
                     <FormControl>
                         <FormLabel
                             display='flex'
@@ -108,7 +109,7 @@ function SignUp() {
                             fontWeight='500'
                             color={textColor}
                             mb='8px'>
-                            User ID<Text color={brandStars}>*</Text>
+                            Name<Text color={brandStars}>*</Text>
                         </FormLabel>
                         <Input
                             isRequired={true}
@@ -120,6 +121,7 @@ function SignUp() {
                             mb='24px'
                             fontWeight='500'
                             size='lg'
+                            value = "Alex"
                             onChange={(e) => setSignIn({ ...SignIn, "userid": e.target.value })}
                         />
                         <FormLabel
@@ -127,7 +129,8 @@ function SignUp() {
                             fontSize='sm'
                             fontWeight='500'
                             color={textColor}
-                            display='flex'>
+                            display='flex'
+                            >
                             Password<Text color={brandStars}>*</Text>
                         </FormLabel>
                         <InputGroup size='md'>
@@ -139,6 +142,7 @@ function SignUp() {
                                 size='lg'
                                 type={show ? "text" : "password"}
                                 variant='auth'
+                                value = "InvESGis100points!"
                                 onChange={(e) => setSignIn({ ...SignIn, "password": e.target.value })}
                             />
                             <InputRightElement display='flex' alignItems='center' mt='4px'>
@@ -156,7 +160,8 @@ function SignUp() {
                             fontSize='sm'
                             fontWeight='500'
                             color={textColor}
-                            mb='8px'>
+                            mb='8px'
+                            >
                             Email<Text color={brandStars}>*</Text>
                         </FormLabel>
                         <Input
@@ -169,17 +174,18 @@ function SignUp() {
                             mb='24px'
                             fontWeight='500'
                             size='lg'
+                            value = "test@gmail.com"
                             onChange={(e) => setSignIn({ ...SignIn, "email": e.target.value })}
                         />
                         <FormLabel as='legend'>Martial Status</FormLabel>
-                        <RadioGroup my= '24px'defaultValue='Single' >
+                        <RadioGroup my='24px' defaultValue='Single' >
                             <HStack spacing='24px'>
-                                <Radio 
-                                onChange={(e) => setSignIn({ ...SignIn, "martialStatus": e.target.value })}
-                                value='Single'>Single</Radio>
-                                <Radio 
-                                onChange={(e) => setSignIn({ ...SignIn, "martialStatus": e.target.value })}
-                                value='Married'>Married</Radio>
+                                <Radio
+                                    onChange={(e) => setSignIn({ ...SignIn, "martialStatus": e.target.value })}
+                                    value='Single'>Single</Radio>
+                                <Radio
+                                    onChange={(e) => setSignIn({ ...SignIn, "martialStatus": e.target.value })}
+                                    value='Married'>Married</Radio>
                             </HStack>
                         </RadioGroup>
                         <FormLabel as='legend'>Annual Income</FormLabel>
@@ -193,11 +199,12 @@ function SignUp() {
                             mb='24px'
                             fontWeight='500'
                             size='lg'
+                            value = "100000"
                             onChange={(e) => setSignIn({ ...SignIn, "income": e.target.value })}
                         />
                         <NavLink to='/admin/KYCquiz'>
                             <Button
-                                my = '24px'
+                                my='24px'
                                 fontSize='sm'
                                 variant='brand'
                                 fontWeight='500'
@@ -205,7 +212,7 @@ function SignUp() {
                                 h='50'
                                 mb='24px'
                             >
-                                Personality Quiz! 
+                                Personality Quiz!
                             </Button>
                         </NavLink>
                     </FormControl>

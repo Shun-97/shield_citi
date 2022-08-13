@@ -62,8 +62,8 @@ function SignIn() {
 
   const [show, setShow] = React.useState(false);
   const [SignIn, setSignIn] = useState({
-    "userid": "",
-    "password": "",
+    "userid": "demo@gmail.com",
+    "password": "1234",
   })
   const handleClick = () => setShow(!show);
   console.log(SignIn)
@@ -130,7 +130,7 @@ function SignIn() {
               fontWeight='500'
               color={textColor}
               mb='8px'>
-              User ID<Text color={brandStars}>*</Text>
+              Email<Text color={brandStars}>*</Text>
             </FormLabel>
             <Input
               isRequired={true}
@@ -142,6 +142,7 @@ function SignIn() {
               mb='24px'
               fontWeight='500'
               size='lg'
+              value = 'demo@gmail.com'
               onChange={(e) => setSignIn({ ...SignIn, "userid": e.target.value })}
             />
             <FormLabel
@@ -161,6 +162,7 @@ function SignIn() {
                 size='lg'
                 type={show ? "text" : "password"}
                 variant='auth'
+                value = '1234'
                 onChange={(e) => setSignIn({ ...SignIn, "password": e.target.value })}
               />
               <InputRightElement display='flex' alignItems='center' mt='4px'>
@@ -188,7 +190,7 @@ function SignIn() {
                   Keep me logged in
                 </FormLabel>
               </FormControl>
-              <NavLink to='/auth/forgot-password'>
+              <NavLink to='/auth/sign-up'>
                 <Text
                   color={textColorBrand}
                   fontSize='sm'
