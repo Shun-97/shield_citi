@@ -1,5 +1,8 @@
 ### InvESG by Team S.H.I.E.L.D.
 
+
+The application we came up with sought to educate the mass affluent about ESG, understand investors' ESG sentiment, offer them recommendations based on these sentiments, and finally show the impact of their ESG investments.
+
 MEMBERS:
 Joel Seah Shang Hong
 Lee Shun Hui
